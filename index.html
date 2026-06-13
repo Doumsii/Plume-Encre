@@ -1003,8 +1003,20 @@ body::before {
           <div class="lesson-name">Thâ'</div>
           <div class="lesson-translit">Th</div>
         </div>
-        <div class="lesson-card locked"><span class="lesson-status">🔒</span><div class="lesson-num">Leçon 21</div><div class="lesson-letter">م</div><div class="lesson-name">Mîm</div><div class="lesson-translit">M</div></div>
-        <div class="lesson-card locked"><span class="lesson-status">🔒</span><div class="lesson-num">Leçon 22</div><div class="lesson-letter">و</div><div class="lesson-name">Wâw</div><div class="lesson-translit">W/Û</div></div>
+        <div class="lesson-card available" id="card-mim" onclick="navigate('page-lesson-mim')">
+          <span class="lesson-status unlocked" id="status-mim">●</span>
+          <div class="lesson-num">Leçon 21</div>
+          <div class="lesson-letter">م</div>
+          <div class="lesson-name">Mîm</div>
+          <div class="lesson-translit">M</div>
+        </div>
+        <div class="lesson-card available" id="card-waw" onclick="navigate('page-lesson-waw')">
+          <span class="lesson-status unlocked" id="status-waw">●</span>
+          <div class="lesson-num">Leçon 22</div>
+          <div class="lesson-letter">و</div>
+          <div class="lesson-name">Wâw</div>
+          <div class="lesson-translit">W/Û</div>
+        </div>
         <div class="lesson-card locked"><span class="lesson-status">🔒</span><div class="lesson-num">Leçon 23</div><div class="lesson-letter">ي</div><div class="lesson-name">Yâ'</div><div class="lesson-translit">Y/Î</div></div>
         <div class="lesson-card locked"><span class="lesson-status">🔒</span><div class="lesson-num">Leçon 24</div><div class="lesson-letter">ل</div><div class="lesson-name">Lâm</div><div class="lesson-translit">L</div></div>
         <div class="lesson-card locked"><span class="lesson-status">🔒</span><div class="lesson-num">Leçon 25</div><div class="lesson-letter">ر</div><div class="lesson-name">Râ'</div><div class="lesson-translit">R</div></div>
@@ -5174,7 +5186,411 @@ body::before {
     <div class="navigation">
       <button class="nav-btn" onclick="navigate('page-lesson-ta')"><span class="nav-btn-arrow">←</span> Leçon 19 : ت (Tâ')</button>
       <button class="nav-btn nav-btn-center" onclick="navigate('page-accueil')">Sommaire</button>
-      <button class="nav-btn nav-btn-disabled">Leçon 21 : م (bientôt) <span class="nav-btn-arrow">→</span></button>
+      <button class="nav-btn" onclick="navigate('page-lesson-mim')">Leçon 21 : م (Mîm) <span class="nav-btn-arrow">→</span></button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text">Le souffle de l'apprentissage</div>
+      <div class="footer-brand">Plume &amp; Encre</div>
+    </footer>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE : LEÇON 21 – MÎM  (générée)
+     ============================================================ -->
+<div id="page-lesson-mim" class="page-container hidden">
+  <div class="page-inner">
+
+    <header class="lesson-header">
+      <div class="brand">Plume &amp; Encre</div>
+      <div class="lesson-num-label">Leçon 21 — Initiation à l'alphabet arabe</div>
+      <h1 class="lesson-title">La lettre Mîm</h1>
+      <div class="lesson-subtitle">حَرْفُ المِيم</div>
+    </header>
+
+    <div class="hero-letter">
+      <div class="big-letter" id="mim-bigLetter" title="Cliquez pour écouter">م</div>
+      <div style="margin-top:25px;">
+        <div class="voice-toggle">
+          <button class="voice-btn active" data-voice="male" onclick="setVoice('male')">♂ Voix masculine</button>
+          <button class="voice-btn" data-voice="female" onclick="setVoice('female')">♀ Voix féminine</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">مِيم</div><div class="info-card-trans">Mîm</div></div>
+      <div class="info-card"><div class="info-card-label">Son</div><div class="info-card-value">M</div></div>
+      <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">21 / 28</div><div class="info-card-trans">vingt-et-unième leçon</div></div>
+    </div>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Le tracé</h2><span class="section-title-lesson-ar">الكِتَابَة</span><div class="section-title-lesson-line"></div></div>
+      <div class="trace-container">
+        <div style="display:flex;justify-content:center;gap:20px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--sepia-clair);"><span style="display:inline-block;width:20px;height:3px;background:var(--bleu-nuit);vertical-align:middle;border-radius:2px;margin-right:6px;"></span>Un seul trait : la tête et la descente</span>
+        </div>
+        <svg class="trace-svg" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="mim-revealClip">
+              <rect id="mim-revealRect" x="500" y="0" width="0" height="360"/>
+            </clipPath>
+          </defs>
+          <line x1="40" y1="138" x2="460" y2="138" stroke="#BFA06A" stroke-width="0.8" opacity="0.5"/>
+          <path d="M209.24476224301404 96.33294224117876Q210.90874333475543 85.68346325403385 213.7375111907158 75.20038237606309Q216.56627904667616 64.71730149809234 221.22542610355205 55.066211165992286Q230.87651643565212 35.431234283443885 241.85879164114527 31.437679663264547Q257.50021390351435 25.44734773299554 279.797560532849 44.41673217884738Q285.787892463118 49.408675454071556 291.1126319566904 55.066211165992286Q296.43737145026284 60.723746877913015 301.4293147254871 67.04687502653029Q304.4244806906215 70.70763342836135 304.0916844722733 74.03559561184413Q301.7621109438353 88.34583300082008 300.0981298520939 96.83213656870117Q298.4341487603525 105.31844013658227 297.76855632365596 106.98242122832366Q296.1045752319146 110.6431796301547 292.1110206117353 109.64479097510987Q237.19964458426938 96.66573845952703 209.24476224301404 129.61256407600655Q206.5823924962278 132.94052625948933 207.58078115127265 136.2684884429721Q219.56144501181066 180.1975892649448 229.545331562259 231.44820689057963Q244.5211613879315 308.6569295473801 232.20770130904523 309.98811442077323Q228.2141466888659 310.3209106391215 227.21575803382106 301.335412743718Q225.88457316042795 285.3611942630007 222.2238147585969 266.7246060354971Q218.56305635676583 248.08801780799354 213.23831686319338 227.121856052052Q193.2705437622967 150.57872583194808 196.26570972743122 131.60934138609622Q197.9296908191726 118.96308508886166 201.4240511118295 110.1439853026323Q204.91841140448642 101.32488551640293 209.24476224301404 96.33294224117876ZM226.5501655971245 84.01948216229246Q232.5404975273935 81.35711241550624 239.8620143310556 79.5267332145907Q247.18353113471773 77.69635401367519 255.50343659342468 76.69796535863036Q243.1899765145384 66.38128258983373 237.19964458426938 68.3780598999234Q228.2141466888659 71.04042964670963 226.5501655971245 84.01948216229246Z" fill="#BFA06A" opacity="0.18"/>
+          
+          <g clip-path="url(#mim-revealClip)">
+            <path d="M209.24476224301404 96.33294224117876Q210.90874333475543 85.68346325403385 213.7375111907158 75.20038237606309Q216.56627904667616 64.71730149809234 221.22542610355205 55.066211165992286Q230.87651643565212 35.431234283443885 241.85879164114527 31.437679663264547Q257.50021390351435 25.44734773299554 279.797560532849 44.41673217884738Q285.787892463118 49.408675454071556 291.1126319566904 55.066211165992286Q296.43737145026284 60.723746877913015 301.4293147254871 67.04687502653029Q304.4244806906215 70.70763342836135 304.0916844722733 74.03559561184413Q301.7621109438353 88.34583300082008 300.0981298520939 96.83213656870117Q298.4341487603525 105.31844013658227 297.76855632365596 106.98242122832366Q296.1045752319146 110.6431796301547 292.1110206117353 109.64479097510987Q237.19964458426938 96.66573845952703 209.24476224301404 129.61256407600655Q206.5823924962278 132.94052625948933 207.58078115127265 136.2684884429721Q219.56144501181066 180.1975892649448 229.545331562259 231.44820689057963Q244.5211613879315 308.6569295473801 232.20770130904523 309.98811442077323Q228.2141466888659 310.3209106391215 227.21575803382106 301.335412743718Q225.88457316042795 285.3611942630007 222.2238147585969 266.7246060354971Q218.56305635676583 248.08801780799354 213.23831686319338 227.121856052052Q193.2705437622967 150.57872583194808 196.26570972743122 131.60934138609622Q197.9296908191726 118.96308508886166 201.4240511118295 110.1439853026323Q204.91841140448642 101.32488551640293 209.24476224301404 96.33294224117876ZM226.5501655971245 84.01948216229246Q232.5404975273935 81.35711241550624 239.8620143310556 79.5267332145907Q247.18353113471773 77.69635401367519 255.50343659342468 76.69796535863036Q243.1899765145384 66.38128258983373 237.19964458426938 68.3780598999234Q228.2141466888659 71.04042964670963 226.5501655971245 84.01948216229246Z" fill="#0B1326"/>
+          </g>
+          
+          <g id="mim-startIndicator" opacity="0">
+            <circle cx="290" cy="52" r="10" fill="none" stroke="#0F6E5C" stroke-width="2.5">
+              <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <text x="306" y="46" font-family="Playfair Display" font-size="13" fill="#0F6E5C" font-style="italic">départ</text>
+          </g>
+          <g id="mim-traceGuides" opacity="0">
+            <text x="320" y="82" font-family="Playfair Display" font-size="16" fill="#0F6E5C" font-style="italic" font-weight="700" text-anchor="middle">1</text>
+            
+            <text x="250" y="348" font-family="Playfair Display" font-size="12" fill="#0F6E5C" font-style="italic" text-anchor="middle">1 . la petite boucle puis la descente, de droite à gauche</text>
+          </g>
+        </svg>
+        <div class="trace-controls">
+          <button class="btn" onclick="animateTrace('mim')">▶ Voir le tracé</button>
+          <button class="btn btn-outline" onclick="toggleGuides('mim')">Afficher l'ordre</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Les quatre formes</h2><span class="section-title-lesson-ar">الأَشْكَال</span><div class="section-title-lesson-line"></div></div>
+      <div class="positions-grid">
+        <div class="position-card"><div class="position-label">Isolée</div><div class="position-letter">م</div><div class="position-example"><span class="highlight">م</span></div><div class="position-translit">m</div></div>
+        <div class="position-card"><div class="position-label">Initiale</div><div class="position-letter">مـ</div><div class="position-example"><span class="highlight">مِ</span>صْباح</div><div class="position-translit">miṣbâḥ — la lampe</div></div>
+        <div class="position-card"><div class="position-label">Médiane</div><div class="position-letter">ـمـ</div><div class="position-example">جَ<span class="highlight">مَ</span>ل</div><div class="position-translit">jamal — le chameau</div></div>
+        <div class="position-card"><div class="position-label">Finale</div><div class="position-letter">ـم</div><div class="position-example">عَلَ<span class="highlight">م</span></div><div class="position-translit">'alam — le drapeau</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Les harakât</h2><span class="section-title-lesson-ar">الحَرَكَات</span><div class="section-title-lesson-line"></div></div>
+      <div class="harakat-container">
+        <div class="harakat-title">Les voyelles courtes</div>
+        <div class="harakat-subtitle">الحَرَكَات الثَّلَاث</div>
+        <div class="harakat-grid">
+          <div class="haraka-card" onclick="speakArabic('مَ')"><div class="haraka-name">Fatha</div><div class="haraka-arabic">الفَتْحَة</div><div class="haraka-example">مَ</div><div class="haraka-sound">→ « MA »</div></div>
+          <div class="haraka-card" onclick="speakArabic('مِ')"><div class="haraka-name">Kasra</div><div class="haraka-arabic">الكَسْرَة</div><div class="haraka-example">مِ</div><div class="haraka-sound">→ « MI »</div></div>
+          <div class="haraka-card" onclick="speakArabic('مُ')"><div class="haraka-name">Damma</div><div class="haraka-arabic">الضَّمَّة</div><div class="haraka-example">مُ</div><div class="haraka-sound">→ « MOU »</div></div>
+        </div>
+        <div class="haraka-divider"><span class="haraka-divider-text">Signes complémentaires</span></div>
+        <div class="harakat-grid-2">
+          <div class="haraka-card" onclick="speakArabic('مْ')"><div class="haraka-name">Soukoun</div><div class="haraka-arabic">السُّكُون</div><div class="haraka-example">مْ</div><div class="haraka-sound">→ son neutre</div></div>
+          <div class="haraka-card" onclick="speakArabic('مّ')"><div class="haraka-name">Shadda</div><div class="haraka-arabic">الشَّدَّة</div><div class="haraka-example">مّ</div><div class="haraka-sound">→ lettre doublée</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Exercices</h2><span class="section-title-lesson-ar">تَمَارِين</span><div class="section-title-lesson-line"></div></div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre م dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ مِيم ؟</div></div></div>
+        <div class="exercise-grid">
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'م')"><div class="exercise-word">مَدِينَة</div><div class="exercise-word-translit"><span class="coran">madîna — la ville ☪</span></div></div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'م')"><div class="exercise-word">مَسْجِد</div><div class="exercise-word-translit"><span class="coran">masjid — la mosquée ☪</span></div></div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'م')"><div class="exercise-word">مُؤْمِنَات</div><div class="exercise-word-translit"><span class="coran">mu'minât — les croyantes ☪</span></div></div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'م')"><div class="exercise-word">مِصْباح</div><div class="exercise-word-translit">miṣbâḥ — la lampe</div></div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'م')"><div class="exercise-word">سَمَكَة</div><div class="exercise-word-translit">samaka — le poisson</div></div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'م')"><div class="exercise-word">عُثْمان</div><div class="exercise-word-translit">'Uthmân — Othmân</div></div>
+        </div>
+        <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
+      </div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 2</div><div class="exercise-intro-fr">Complète le mot : quelle forme convient ? Attention aux intrus !</div><div class="exercise-intro-ar">اِخْتَرِ الحَرْفَ الصَّحِيح</div></div></div>
+        <div class="complete-grid">
+          <div class="complete-item"><div class="complete-word"><span class="complete-blank" data-target="مـ"></span>‍ِصْباح</div><div class="complete-translit"><span class="coran">miṣbâḥ — la lampe ☪ ()</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="ـن" onclick="checkChoice(this,'مـ')">ـن</button><button class="choice-btn" data-letter="مـ" onclick="checkChoice(this,'مـ')">مـ</button><button class="choice-btn" data-letter="ـم" onclick="checkChoice(this,'مـ')">ـم</button></div></div>
+          <div class="complete-item"><div class="complete-word">جَ‍<span class="complete-blank" data-target="ـمـ"></span>‍َل</div><div class="complete-translit"><span class="coran">jamal — le chameau ☪ ()</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="ـه" onclick="checkChoice(this,'ـمـ')">ـه</button><button class="choice-btn" data-letter="ـنـ" onclick="checkChoice(this,'ـمـ')">ـنـ</button><button class="choice-btn" data-letter="ـمـ" onclick="checkChoice(this,'ـمـ')">ـمـ</button></div></div>
+          <div class="complete-item"><div class="complete-word">عَلَ‍<span class="complete-blank" data-target="ـم"></span></div><div class="complete-translit"><span class="coran">'alam — le drapeau ☪ ()</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="ـه" onclick="checkChoice(this,'ـم')">ـه</button><button class="choice-btn" data-letter="ـمـ" onclick="checkChoice(this,'ـم')">ـمـ</button><button class="choice-btn" data-letter="ـم" onclick="checkChoice(this,'ـم')">ـم</button></div></div>
+          <div class="complete-item"><div class="complete-word"><span class="complete-blank" data-target="مـ"></span>‍َسْجِد</div><div class="complete-translit"><span class="coran">masjid — la mosquée (sourate 9) ☪ (sourate 9)</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="نـ" onclick="checkChoice(this,'مـ')">نـ</button><button class="choice-btn" data-letter="مـ" onclick="checkChoice(this,'مـ')">مـ</button><button class="choice-btn" data-letter="ـه" onclick="checkChoice(this,'مـ')">ـه</button></div></div>
+        </div>
+      </div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 3</div><div class="exercise-intro-fr">Entoure la lettre م dans chaque mot.</div><div class="exercise-intro-ar">أَضَعُ دَائِرَةً حَوْلَ حَرْفِ مِيم</div></div></div>
+        <div class="circle-text">
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">مَدِينَة</span>
+          <span class="circle-word" onclick="toggleCircle(this)">كِتَاب</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">مَسْجِد</span>
+          <span class="circle-word" onclick="toggleCircle(this)">وَلَد</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">جَمَل</span>
+          <span class="circle-word" onclick="toggleCircle(this)">بَيْت</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">مُؤْمِن</span>
+          <span class="circle-word" onclick="toggleCircle(this)">دِين</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">عَلَم</span>
+          <span class="circle-word" onclick="toggleCircle(this)">تِين</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">مُسْتَقِيم</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">سَلام</span>
+        </div>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un م. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
+      <div class="versets-container">
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-fâtiha · l'ouverture</div><div class="verset-mini-ref">— 1 : 2 —</div></div>
+          <div class="verset-mini-arabic" id="mim-v1" onclick="speakArabic('الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ')">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</div>
+          <div class="verset-mini-translation">« Louange à Allah, Seigneur de l'univers, »</div>
+        </div>
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-mâ'ûn · l'ustensile</div><div class="verset-mini-ref">— 107 : 4 —</div></div>
+          <div class="verset-mini-arabic" id="mim-v2" onclick="speakArabic('فَوَيْلٌ لِلْمُصَلِّينَ')">فَوَيْلٌ لِلْمُصَلِّينَ</div>
+          <div class="verset-mini-translation">« Malheur donc à ceux qui prient, »</div>
+        </div>
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-falaq · l'aube naissante</div><div class="verset-mini-ref">— 113 : 2 —</div></div>
+          <div class="verset-mini-arabic" id="mim-v3" onclick="speakArabic('مِنْ شَرِّ مَا خَلَقَ')">مِنْ شَرِّ مَا خَلَقَ</div>
+          <div class="verset-mini-translation">« contre le mal de ce qu'Il a créé, »</div>
+        </div>
+      </div>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["mim-v1", "mim-v2", "mim-v3"],["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "فَوَيْلٌ لِلْمُصَلِّينَ", "مِنْ شَرِّ مَا خَلَقَ"],"م")'>Mettre en évidence le م</button>
+      <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Tous contiennent le م — sauras-tu les retrouver ?</p>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="audio-section">
+        <h3 class="audio-title">Lis et récite à voix haute</h3>
+        <p class="audio-desc">15 combinaisons, du plus simple au plus complexe. Cliquez pour entendre.</p>
+        <div class="syllabes-grid">
+          <button class="syllabe-card" onclick="speakArabic('مَ')">مَ</button><button class="syllabe-card" onclick="speakArabic('مِ')">مِ</button><button class="syllabe-card" onclick="speakArabic('مُ')">مُ</button><button class="syllabe-card" onclick="speakArabic('مْ')">مْ</button><button class="syllabe-card" onclick="speakArabic('مّ')">مّ</button><button class="syllabe-card" onclick="speakArabic('مً')">مً</button><button class="syllabe-card" onclick="speakArabic('مٍ')">مٍ</button><button class="syllabe-card" onclick="speakArabic('مٌ')">مٌ</button><button class="syllabe-card combo" onclick="speakArabic('مَا')">مَا</button><button class="syllabe-card combo" onclick="speakArabic('مِي')">مِي</button><button class="syllabe-card combo" onclick="speakArabic('مُو')">مُو</button><button class="syllabe-card combo" onclick="speakArabic('مَيْ')">مَيْ</button><button class="syllabe-card complex" onclick="speakArabic('جَمَلٌ')">جَمَلٌ</button><button class="syllabe-card complex" onclick="speakArabic('عَلَمٌ')">عَلَمٌ</button><button class="syllabe-card complex" onclick="speakArabic('مَدِينَةٌ')">مَدِينَةٌ</button>
+        </div>
+        <div class="record-box">
+          <p class="record-text">Enregistre-toi en récitant ces combinaisons :</p>
+          <button class="record-btn" id="mim-recordBtn" onclick="toggleRecord('mim')">🎤</button>
+          <div id="mim-recordStatus" style="margin-top:15px;font-family:'Playfair Display';font-style:italic;color:var(--sepia-clair);font-size:14px;"></div>
+          <p class="record-helper">Envoie ton audio à ton professeur via WhatsApp pour correction.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="lesson-validate-section">
+      <div class="lesson-validate-title">Leçon terminée ?</div>
+      <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
+      <div>
+        <button class="btn-validate" id="mim-validateBtn" onclick="validateLesson('mim')">✓ Valider la leçon</button>
+        <a href="fiche_mim_plume_et_encre.pdf" class="pdf-download-link" target="_blank" rel="noopener">📄 Ouvrir la fiche PDF</a>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button class="nav-btn" onclick="navigate('page-lesson-tha')"><span class="nav-btn-arrow">←</span> Leçon 20 : ث (Thâ')</button>
+      <button class="nav-btn nav-btn-center" onclick="navigate('page-accueil')">Sommaire</button>
+      <button class="nav-btn" onclick="navigate('page-lesson-waw')">Leçon 22 : و (Wâw) <span class="nav-btn-arrow">→</span></button>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-text">Le souffle de l'apprentissage</div>
+      <div class="footer-brand">Plume &amp; Encre</div>
+    </footer>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     PAGE : LEÇON 22 – WÂW  (générée)
+     ============================================================ -->
+<div id="page-lesson-waw" class="page-container hidden">
+  <div class="page-inner">
+
+    <header class="lesson-header">
+      <div class="brand">Plume &amp; Encre</div>
+      <div class="lesson-num-label">Leçon 22 — Initiation à l'alphabet arabe</div>
+      <h1 class="lesson-title">La lettre Wâw</h1>
+      <div class="lesson-subtitle">حَرْفُ الوَاو</div>
+    </header>
+
+    <div class="hero-letter">
+      <div class="big-letter" id="waw-bigLetter" title="Cliquez pour écouter">و</div>
+      <div style="margin-top:25px;">
+        <div class="voice-toggle">
+          <button class="voice-btn active" data-voice="male" onclick="setVoice('male')">♂ Voix masculine</button>
+          <button class="voice-btn" data-voice="female" onclick="setVoice('female')">♀ Voix féminine</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">وَاو</div><div class="info-card-trans">Wâw</div></div>
+      <div class="info-card"><div class="info-card-label">Son</div><div class="info-card-value">W</div></div>
+      <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">22 / 28</div><div class="info-card-trans">vingt-deuxième leçon</div></div>
+    </div>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Le tracé</h2><span class="section-title-lesson-ar">الكِتَابَة</span><div class="section-title-lesson-line"></div></div>
+      <div class="trace-container">
+        <div style="display:flex;justify-content:center;gap:20px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--sepia-clair);"><span style="display:inline-block;width:20px;height:3px;background:var(--bleu-nuit);vertical-align:middle;border-radius:2px;margin-right:6px;"></span>Un seul trait : la boucle et la queue</span>
+        </div>
+        <svg class="trace-svg" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="waw-revealClip">
+              <rect id="waw-revealRect" x="500" y="0" width="0" height="360"/>
+            </clipPath>
+          </defs>
+          <line x1="40" y1="189" x2="460" y2="189" stroke="#BFA06A" stroke-width="0.8" opacity="0.5"/>
+          <path d="M272.73807062948936 82.59257780528218Q291.9104100781149 29.45780847623419 317.65612305198357 30.005589603337796Q333.54177573798756 30.005589603337796 347.23630391557725 51.91683468748127Q354.3574585679239 62.872457229553035 358.191926457649 74.92364202583195Q362.0263943473741 86.97482682211087 364.21751885578846 100.66935499970056Q368.5997678726172 128.05841135487992 356.00080194923464 176.8109316670992Q343.40183602585216 225.56345197931847 307.796062764119 266.09925538498396Q271.6425083752822 307.182839917753 250.27904441824228 309.3739644261674Q228.36779933409878 311.5650889345817 192.21424494526204 306.0872776635458Q174.13746775084365 303.3483720280279 161.26461126390933 299.7877947018546Q148.39175477697503 296.2272173756813 140.17503787042122 292.94053061305976Q134.14944547228177 290.20162497754177 134.69722659938535 286.3671570878167Q135.79278885359253 281.984908070988 141.81838125173198 283.08047032519517Q184.54530916581183 289.1060627233346 223.43776919016653 279.79378356257365Q234.94117285934186 277.0548779270557 251.64849723600128 266.09925538498396Q268.3558216126607 255.1436328429122 290.2670666968042 235.97129339428665Q312.1783117809477 216.79895394566108 325.3250588314338 200.91330125965703Q338.47180588191986 185.027648573653 342.30627377164495 171.88090152316693Q339.567368136127 148.87409418481624 335.7329002464019 146.6829696764019Q314.91721741646563 179.00205617551356 282.59813091735396 162.56862236240593Q250.27904441824228 146.1351885492983 272.73807062948936 82.59257780528218ZM322.5861531959158 102.8604795081149Q306.7005005099118 77.1147665342463 288.6237233154934 100.66935499970056Q302.3182514930831 116.007226558601 322.5861531959158 102.8604795081149Z" fill="#BFA06A" opacity="0.18"/>
+          
+          <g clip-path="url(#waw-revealClip)">
+            <path d="M272.73807062948936 82.59257780528218Q291.9104100781149 29.45780847623419 317.65612305198357 30.005589603337796Q333.54177573798756 30.005589603337796 347.23630391557725 51.91683468748127Q354.3574585679239 62.872457229553035 358.191926457649 74.92364202583195Q362.0263943473741 86.97482682211087 364.21751885578846 100.66935499970056Q368.5997678726172 128.05841135487992 356.00080194923464 176.8109316670992Q343.40183602585216 225.56345197931847 307.796062764119 266.09925538498396Q271.6425083752822 307.182839917753 250.27904441824228 309.3739644261674Q228.36779933409878 311.5650889345817 192.21424494526204 306.0872776635458Q174.13746775084365 303.3483720280279 161.26461126390933 299.7877947018546Q148.39175477697503 296.2272173756813 140.17503787042122 292.94053061305976Q134.14944547228177 290.20162497754177 134.69722659938535 286.3671570878167Q135.79278885359253 281.984908070988 141.81838125173198 283.08047032519517Q184.54530916581183 289.1060627233346 223.43776919016653 279.79378356257365Q234.94117285934186 277.0548779270557 251.64849723600128 266.09925538498396Q268.3558216126607 255.1436328429122 290.2670666968042 235.97129339428665Q312.1783117809477 216.79895394566108 325.3250588314338 200.91330125965703Q338.47180588191986 185.027648573653 342.30627377164495 171.88090152316693Q339.567368136127 148.87409418481624 335.7329002464019 146.6829696764019Q314.91721741646563 179.00205617551356 282.59813091735396 162.56862236240593Q250.27904441824228 146.1351885492983 272.73807062948936 82.59257780528218ZM322.5861531959158 102.8604795081149Q306.7005005099118 77.1147665342463 288.6237233154934 100.66935499970056Q302.3182514930831 116.007226558601 322.5861531959158 102.8604795081149Z" fill="#0B1326"/>
+          </g>
+          
+          <g id="waw-startIndicator" opacity="0">
+            <circle cx="351" cy="52" r="10" fill="none" stroke="#0F6E5C" stroke-width="2.5">
+              <animate attributeName="r" from="6" to="20" dur="1.5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite"/>
+            </circle>
+            <text x="367" y="46" font-family="Playfair Display" font-size="13" fill="#0F6E5C" font-style="italic">départ</text>
+          </g>
+          <g id="waw-traceGuides" opacity="0">
+            <text x="381" y="82" font-family="Playfair Display" font-size="16" fill="#0F6E5C" font-style="italic" font-weight="700" text-anchor="middle">1</text>
+            
+            <text x="250" y="348" font-family="Playfair Display" font-size="12" fill="#0F6E5C" font-style="italic" text-anchor="middle">1 . la boucle ronde puis la queue, de droite à gauche . le و ne s'attache jamais à gauche</text>
+          </g>
+        </svg>
+        <div class="trace-controls">
+          <button class="btn" onclick="animateTrace('waw')">▶ Voir le tracé</button>
+          <button class="btn btn-outline" onclick="toggleGuides('waw')">Afficher l'ordre</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Les quatre formes</h2><span class="section-title-lesson-ar">الأَشْكَال</span><div class="section-title-lesson-line"></div></div>
+      <div class="positions-grid">
+        <div class="position-card"><div class="position-label">Isolée</div><div class="position-letter">و</div><div class="position-example"><span class="highlight">و</span></div><div class="position-translit">w</div></div>
+        <div class="position-card"><div class="position-label">Isolée (début de mot)</div><div class="position-letter">و</div><div class="position-example"><span class="highlight">وَ</span>لَد</div><div class="position-translit">walad — l'enfant</div></div>
+        <div class="position-card"><div class="position-label">Après une lettre</div><div class="position-letter">ـو</div><div class="position-example">شَ<span class="highlight">وْ</span>كَة</div><div class="position-translit">shawka — la fourchette</div></div>
+        <div class="position-card"><div class="position-label">Finale</div><div class="position-letter">ـو</div><div class="position-example">دَلْ<span class="highlight">و</span></div><div class="position-translit">dalw — le seau</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Les harakât</h2><span class="section-title-lesson-ar">الحَرَكَات</span><div class="section-title-lesson-line"></div></div>
+      <div class="harakat-container">
+        <div class="harakat-title">Les voyelles courtes</div>
+        <div class="harakat-subtitle">الحَرَكَات الثَّلَاث</div>
+        <div class="harakat-grid">
+          <div class="haraka-card" onclick="speakArabic('وَ')"><div class="haraka-name">Fatha</div><div class="haraka-arabic">الفَتْحَة</div><div class="haraka-example">وَ</div><div class="haraka-sound">→ « WA »</div></div>
+          <div class="haraka-card" onclick="speakArabic('وِ')"><div class="haraka-name">Kasra</div><div class="haraka-arabic">الكَسْرَة</div><div class="haraka-example">وِ</div><div class="haraka-sound">→ « WI »</div></div>
+          <div class="haraka-card" onclick="speakArabic('وُ')"><div class="haraka-name">Damma</div><div class="haraka-arabic">الضَّمَّة</div><div class="haraka-example">وُ</div><div class="haraka-sound">→ « WOU »</div></div>
+        </div>
+        <div class="haraka-divider"><span class="haraka-divider-text">Signes complémentaires</span></div>
+        <div class="harakat-grid-2">
+          <div class="haraka-card" onclick="speakArabic('وْ')"><div class="haraka-name">Soukoun</div><div class="haraka-arabic">السُّكُون</div><div class="haraka-example">وْ</div><div class="haraka-sound">→ son neutre</div></div>
+          <div class="haraka-card" onclick="speakArabic('وّ')"><div class="haraka-name">Shadda</div><div class="haraka-arabic">الشَّدَّة</div><div class="haraka-example">وّ</div><div class="haraka-sound">→ lettre doublée</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Exercices</h2><span class="section-title-lesson-ar">تَمَارِين</span><div class="section-title-lesson-line"></div></div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre و dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ وَاو ؟</div></div></div>
+        <div class="exercise-grid">
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'و')"><div class="exercise-word">وَلَد</div><div class="exercise-word-translit"><span class="coran">walad — l'enfant ☪</span></div></div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'و')"><div class="exercise-word">واحِد</div><div class="exercise-word-translit"><span class="coran">wâḥid — un (seul) ☪</span></div></div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'و')"><div class="exercise-word">صَواب</div><div class="exercise-word-translit"><span class="coran">ṣawâb — le juste ☪</span></div></div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'و')"><div class="exercise-word">تَوْفيق</div><div class="exercise-word-translit">tawfîq — la réussite</div></div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'و')"><div class="exercise-word">قَهْوَة</div><div class="exercise-word-translit">qahwa — le café</div></div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'و')"><div class="exercise-word">وِسادَة</div><div class="exercise-word-translit">wisâda — l'oreiller</div></div>
+        </div>
+        <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
+      </div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 2</div><div class="exercise-intro-fr">Complète le mot : quelle forme convient ? Attention aux intrus !</div><div class="exercise-intro-ar">اِخْتَرِ الحَرْفَ الصَّحِيح</div></div></div>
+        <div class="complete-grid">
+          <div class="complete-item"><div class="complete-word"><span class="complete-blank" data-target="و"></span>‍َلَد</div><div class="complete-translit"><span class="coran">walad — l'enfant (sourate 19) ☪ (sourate 19)</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="و" onclick="checkChoice(this,'و')">و</button><button class="choice-btn" data-letter="ـو" onclick="checkChoice(this,'و')">ـو</button><button class="choice-btn" data-letter="ـر" onclick="checkChoice(this,'و')">ـر</button></div></div>
+          <div class="complete-item"><div class="complete-word">قَهْ‍<span class="complete-blank" data-target="ـو"></span>‍َة</div><div class="complete-translit"><span class="coran">qahwa — le café ☪ ()</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="ـو" onclick="checkChoice(this,'ـو')">ـو</button><button class="choice-btn" data-letter="ز" onclick="checkChoice(this,'ـو')">ز</button><button class="choice-btn" data-letter="ـر" onclick="checkChoice(this,'ـو')">ـر</button></div></div>
+          <div class="complete-item"><div class="complete-word">دَلْ‍<span class="complete-blank" data-target="ـو"></span></div><div class="complete-translit"><span class="coran">dalw — le seau ☪ ()</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="ـو" onclick="checkChoice(this,'ـو')">ـو</button><button class="choice-btn" data-letter="و" onclick="checkChoice(this,'ـو')">و</button><button class="choice-btn" data-letter="ز" onclick="checkChoice(this,'ـو')">ز</button></div></div>
+          <div class="complete-item"><div class="complete-word"><span class="complete-blank" data-target="و"></span>‍احِد</div><div class="complete-translit"><span class="coran">wâḥid — un seul (sourate 2) ☪ (sourate 2)</span></div><div class="choice-buttons"><button class="choice-btn" data-letter="و" onclick="checkChoice(this,'و')">و</button><button class="choice-btn" data-letter="ـز" onclick="checkChoice(this,'و')">ـز</button><button class="choice-btn" data-letter="ر" onclick="checkChoice(this,'و')">ر</button></div></div>
+        </div>
+      </div>
+      <div class="exercise-block">
+        <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 3</div><div class="exercise-intro-fr">Entoure la lettre و dans chaque mot.</div><div class="exercise-intro-ar">أَضَعُ دَائِرَةً حَوْلَ حَرْفِ وَاو</div></div></div>
+        <div class="circle-text">
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">وَلَد</span>
+          <span class="circle-word" onclick="toggleCircle(this)">دِين</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">قَهْوَة</span>
+          <span class="circle-word" onclick="toggleCircle(this)">بَيْت</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">سُوق</span>
+          <span class="circle-word" onclick="toggleCircle(this)">كِتَاب</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">صَواب</span>
+          <span class="circle-word" onclick="toggleCircle(this)">مَسْجِد</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">واحِد</span>
+          <span class="circle-word" onclick="toggleCircle(this)">سَلام</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">تَوْفيق</span>
+          <span class="circle-word coran-word" onclick="toggleCircle(this)">مُؤْمِنُون</span>
+        </div>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un و. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
+      <div class="versets-container">
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-ikhlâs · le monothéisme pur</div><div class="verset-mini-ref">— 112 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="waw-v1" onclick="speakArabic('قُلْ هُوَ اللَّهُ أَحَدٌ')">قُلْ هُوَ اللَّهُ أَحَدٌ</div>
+          <div class="verset-mini-translation">« Dis : "Lui, Allah, est Unique." »</div>
+        </div>
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-'aṣr · le temps</div><div class="verset-mini-ref">— 103 : 3 —</div></div>
+          <div class="verset-mini-arabic" id="waw-v2" onclick="speakArabic('وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ')">وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ</div>
+          <div class="verset-mini-translation">« et s'enjoignent mutuellement la vérité, et s'enjoignent mutuellement l'endurance. »</div>
+        </div>
+        <div class="verset-mini">
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate ad-duḥâ · le matin</div><div class="verset-mini-ref">— 93 : 4 —</div></div>
+          <div class="verset-mini-arabic" id="waw-v3" onclick="speakArabic('وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَىٰ')">وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَىٰ</div>
+          <div class="verset-mini-translation">« La vie dernière t'est, certes, meilleure que la première. »</div>
+        </div>
+      </div>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["waw-v1", "waw-v2", "waw-v3"],["قُلْ هُوَ اللَّهُ أَحَدٌ", "وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ", "وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَىٰ"],"و")'>Mettre en évidence le و</button>
+      <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Tous contiennent le و — sauras-tu les retrouver ?</p>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="audio-section">
+        <h3 class="audio-title">Lis et récite à voix haute</h3>
+        <p class="audio-desc">15 combinaisons, du plus simple au plus complexe. Cliquez pour entendre.</p>
+        <div class="syllabes-grid">
+          <button class="syllabe-card" onclick="speakArabic('وَ')">وَ</button><button class="syllabe-card" onclick="speakArabic('وِ')">وِ</button><button class="syllabe-card" onclick="speakArabic('وُ')">وُ</button><button class="syllabe-card" onclick="speakArabic('وْ')">وْ</button><button class="syllabe-card" onclick="speakArabic('وّ')">وّ</button><button class="syllabe-card" onclick="speakArabic('وً')">وً</button><button class="syllabe-card" onclick="speakArabic('وٍ')">وٍ</button><button class="syllabe-card" onclick="speakArabic('وٌ')">وٌ</button><button class="syllabe-card combo" onclick="speakArabic('وَا')">وَا</button><button class="syllabe-card combo" onclick="speakArabic('وِي')">وِي</button><button class="syllabe-card combo" onclick="speakArabic('وُو')">وُو</button><button class="syllabe-card combo" onclick="speakArabic('بَوْ')">بَوْ</button><button class="syllabe-card complex" onclick="speakArabic('وَلَدٌ')">وَلَدٌ</button><button class="syllabe-card complex" onclick="speakArabic('واحِدٌ')">واحِدٌ</button><button class="syllabe-card complex" onclick="speakArabic('سُوقٌ')">سُوقٌ</button>
+        </div>
+        <div class="record-box">
+          <p class="record-text">Enregistre-toi en récitant ces combinaisons :</p>
+          <button class="record-btn" id="waw-recordBtn" onclick="toggleRecord('waw')">🎤</button>
+          <div id="waw-recordStatus" style="margin-top:15px;font-family:'Playfair Display';font-style:italic;color:var(--sepia-clair);font-size:14px;"></div>
+          <p class="record-helper">Envoie ton audio à ton professeur via WhatsApp pour correction.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="lesson-validate-section">
+      <div class="lesson-validate-title">Leçon terminée ?</div>
+      <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
+      <div>
+        <button class="btn-validate" id="waw-validateBtn" onclick="validateLesson('waw')">✓ Valider la leçon</button>
+        <a href="fiche_waw_plume_et_encre.pdf" class="pdf-download-link" target="_blank" rel="noopener">📄 Ouvrir la fiche PDF</a>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <button class="nav-btn" onclick="navigate('page-lesson-mim')"><span class="nav-btn-arrow">←</span> Leçon 21 : م (Mîm)</button>
+      <button class="nav-btn nav-btn-center" onclick="navigate('page-accueil')">Sommaire</button>
+      <button class="nav-btn nav-btn-disabled">Leçon 23 : ي (bientôt) <span class="nav-btn-arrow">→</span></button>
     </div>
 
     <footer class="footer">
@@ -5222,6 +5638,8 @@ function navigate(pageId) {
   if (pageId === 'page-lesson-dhal') { setTimeout(() => animateTrace('dhal'), 700); updateValidateBtn('dhal'); }
   if (pageId === 'page-lesson-ta') { setTimeout(() => animateTrace('ta'), 700); updateValidateBtn('ta'); }
   if (pageId === 'page-lesson-tha') { setTimeout(() => animateTrace('tha'), 700); updateValidateBtn('tha'); }
+  if (pageId === 'page-lesson-mim') { setTimeout(() => animateTrace('mim'), 700); updateValidateBtn('mim'); }
+  if (pageId === 'page-lesson-waw') { setTimeout(() => animateTrace('waw'), 700); updateValidateBtn('waw'); }
 }
 
 /* ============ PROGRESS (localStorage) ============ */
@@ -5259,7 +5677,7 @@ function updateValidateBtn(lessonId) {
 
 function updateSommaire() {
   const p = getProgress();
-  ['ba','kaf','qaf','fa','nun','jim','kha','ha','haa','hamza','ayn','ghayn','sin','shin','sad','dad','dal','dhal','ta','tha'].forEach(id => {
+  ['ba','kaf','qaf','fa','nun','jim','kha','ha','haa','hamza','ayn','ghayn','sin','shin','sad','dad','dal','dhal','ta','tha','mim','waw'].forEach(id => {
     const statusEl = document.getElementById('status-' + id);
     if (statusEl) {
       if (p[id]) { statusEl.textContent = '✓'; statusEl.className = 'lesson-status validated'; }
@@ -5321,9 +5739,11 @@ document.getElementById('dal-bigLetter').addEventListener('click', () => speakAr
 document.getElementById('dhal-bigLetter').addEventListener('click', () => speakArabic('ذَال'));
 document.getElementById('ta-bigLetter').addEventListener('click', () => speakArabic('تَاء'));
 document.getElementById('tha-bigLetter').addEventListener('click', () => speakArabic('ثَاء'));
+document.getElementById('mim-bigLetter').addEventListener('click', () => speakArabic('مِيم'));
+document.getElementById('waw-bigLetter').addEventListener('click', () => speakArabic('وَاو'));
 
 /* ============ ANIMATIONS TRACÉ ============ */
-const guideStates = { ba:false, kaf:false, qaf:false, fa:false, nun:false, jim:false, kha:false, ha:false, haa:false, hamza:false, ayn:false, ghayn:false, sin:false, shin:false, sad:false, dad:false, dal:false, dhal:false, ta:false, tha:false };
+const guideStates = { ba:false, kaf:false, qaf:false, fa:false, nun:false, jim:false, kha:false, ha:false, haa:false, hamza:false, ayn:false, ghayn:false, sin:false, shin:false, sad:false, dad:false, dal:false, dhal:false, ta:false, tha:false, mim:false, waw:false };
 
 const TRACE_DIRS = { hamza: 'down' };
 
