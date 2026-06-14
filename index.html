@@ -798,6 +798,21 @@ body::before {
 body:not(.phon-on) .phon{display:none !important;}
 body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
 @media print{.phon-toggle{display:none !important;}}
+
+/* --- section Iqra (site) --- */
+.iqra-block{margin-top:6px;}
+.iqra-hint{font-family:'Playfair Display',serif;font-style:italic;color:var(--sepia-clair);text-align:center;margin-bottom:20px;}
+.iqra-words{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;direction:rtl;margin-bottom:22px;}
+.iqra-word{font-family:'Amiri',serif;font-size:27px;color:var(--bleu-nuit);background:#fff;border:1px solid rgba(191,160,106,.4);border-radius:4px;padding:7px 15px;cursor:pointer;transition:all .2s ease;}
+.iqra-word:hover{background:var(--creme-fonce);transform:translateY(-2px);}
+.iqra-phrases{display:flex;flex-direction:column;gap:10px;align-items:center;direction:rtl;}
+.iqra-phrase{font-family:'Amiri',serif;font-size:25px;color:var(--bleu-nuit);cursor:pointer;transition:color .2s ease;}
+.iqra-phrase:hover{color:var(--emeraude);}
+.iqra-coran{margin-top:22px;border:1px solid rgba(15,110,92,.35);background:rgba(15,110,92,.05);border-radius:5px;padding:18px 16px;}
+.iqra-coran-title{text-align:center;font-family:'Playfair Display',serif;font-style:italic;color:var(--emeraude);letter-spacing:.12em;text-transform:uppercase;font-size:12.5px;margin-bottom:14px;}
+.iqra-coran-items{display:flex;flex-direction:column;gap:10px;align-items:center;direction:rtl;}
+.iqra-coran-item{font-family:'Amiri',serif;font-size:27px;color:var(--bleu-nuit);cursor:pointer;transition:color .2s ease;}
+.iqra-coran-item:hover{color:var(--emeraude);}
 </style>
 </head>
 <body>
@@ -3736,6 +3751,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('سَبَبٌ')">سَبَبٌ</span><span class="iqra-word" onclick="speakArabic('فَسَخَ')">فَسَخَ</span><span class="iqra-word" onclick="speakArabic('عَبَسَ')">عَبَسَ</span><span class="iqra-word" onclick="speakArabic('كَأْسٌ')">كَأْسٌ</span><span class="iqra-word" onclick="speakArabic('نُحَاسَ')">نُحَاسَ</span><span class="iqra-word" onclick="speakArabic('خَسَفَ')">خَسَفَ</span><span class="iqra-word" onclick="speakArabic('سِ')">سِ</span><span class="iqra-word" onclick="speakArabic('سُو')">سُو</span><span class="iqra-word" onclick="speakArabic('سَجَنَ')">سَجَنَ</span><span class="iqra-word" onclick="speakArabic('آسِفًا')">آسِفًا</span><span class="iqra-word" onclick="speakArabic('كَسَبَ')">كَسَبَ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('فَسَخَهُ حَبِيبٌ.')">فَسَخَهُ حَبِيبٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَنَا حَابِسٌ.')">أَنَا حَابِسٌ.</div><div class="iqra-phrase" onclick="speakArabic('كَأْسُ حَبِيبٍ.')">كَأْسُ حَبِيبٍ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('عَبَسَ')">عَبَسَ</div><div class="iqra-coran-item" onclick="speakArabic('عَسْعَسَ')">عَسْعَسَ</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
@@ -3931,6 +3959,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" onclick="toggleCircle(this)">شَدِيد</span>
         </div>
         <p class="circle-legend">Cliquez sur les mots qui contiennent un ش. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('شَاعَ')">شَاعَ</span><span class="iqra-word" onclick="speakArabic('نَقَشَ')">نَقَشَ</span><span class="iqra-word" onclick="speakArabic('نَقَّاشٌ')">نَقَّاشٌ</span><span class="iqra-word" onclick="speakArabic('شَفَقٌ')">شَفَقٌ</span><span class="iqra-word" onclick="speakArabic('سَقْفٌ')">سَقْفٌ</span><span class="iqra-word" onclick="speakArabic('شَبابٌ')">شَبابٌ</span><span class="iqra-word" onclick="speakArabic('كَبْشٌ')">كَبْشٌ</span><span class="iqra-word" onclick="speakArabic('أَشْفَعُ')">أَشْفَعُ</span><span class="iqra-word" onclick="speakArabic('سَجَنَ')">سَجَنَ</span><span class="iqra-word" onclick="speakArabic('شَحَنَ')">شَحَنَ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('كَبْشُهُ غائِبٌ.')">كَبْشُهُ غائِبٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَنا شابٌّ.')">أَنا شابٌّ.</div><div class="iqra-phrase" onclick="speakArabic('أَخوكَ شابٌّ؟')">أَخوكَ شابٌّ؟</div><div class="iqra-phrase" onclick="speakArabic('اِبْنُكَ شُجاعٌ.')">اِبْنُكَ شُجاعٌ.</div><div class="iqra-phrase" onclick="speakArabic('حُبِسَ عاشِقٌ.')">حُبِسَ عاشِقٌ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('شَهِيقٌ')">شَهِيقٌ</div><div class="iqra-coran-item" onclick="speakArabic('شَاءَ')">شَاءَ</div></div>
+        </div>
       </div>
     </section>
 
@@ -4132,6 +4173,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" onclick="toggleCircle(this)">صِرَاط</span>
         </div>
         <p class="circle-legend">Cliquez sur les mots qui contiennent un ص. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('حِصانٌ')">حِصانٌ</span><span class="iqra-word" onclick="speakArabic('صَحِبَ')">صَحِبَ</span><span class="iqra-word" onclick="speakArabic('صَحْنٌ')">صَحْنٌ</span><span class="iqra-word" onclick="speakArabic('صوفٌ')">صوفٌ</span><span class="iqra-word" onclick="speakArabic('صَنَعَ')">صَنَعَ</span><span class="iqra-word" onclick="speakArabic('صَحيحٌ')">صَحيحٌ</span><span class="iqra-word" onclick="speakArabic('صَحَّ')">صَحَّ</span><span class="iqra-word" onclick="speakArabic('صُو')">صُو</span><span class="iqra-word" onclick="speakArabic('سُو')">سُو</span><span class="iqra-word" onclick="speakArabic('أَصابَ')">أَصابَ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('صَنَعَ حَبيبٌ صَحْنًا.')">صَنَعَ حَبيبٌ صَحْنًا.</div><div class="iqra-phrase" onclick="speakArabic('أُحِبُّ صاحِبي.')">أُحِبُّ صاحِبي.</div><div class="iqra-phrase" onclick="speakArabic('صُحِبَ حَسَنٌ.')">صُحِبَ حَسَنٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَقُصُّ قَصَصًا.')">أَقُصُّ قَصَصًا.</div><div class="iqra-phrase" onclick="speakArabic('باعَ اِبْني حِصانًا.')">باعَ اِبْني حِصانًا.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('صَبَبْنَا')">صَبَبْنَا</div><div class="iqra-coran-item" onclick="speakArabic('أَصْبَحَ')">أَصْبَحَ</div><div class="iqra-coran-item" onclick="speakArabic('نَصِيبٌ')">نَصِيبٌ</div></div>
+        </div>
       </div>
     </section>
 
@@ -4338,6 +4392,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('ضَبٌّ')">ضَبٌّ</span><span class="iqra-word" onclick="speakArabic('ضَبابٌ')">ضَبابٌ</span><span class="iqra-word" onclick="speakArabic('ضَنَّ')">ضَنَّ</span><span class="iqra-word" onclick="speakArabic('أَضافَ')">أَضافَ</span><span class="iqra-word" onclick="speakArabic('ضَعيفٌ')">ضَعيفٌ</span><span class="iqra-word" onclick="speakArabic('ضَجيجٌ')">ضَجيجٌ</span><span class="iqra-word" onclick="speakArabic('ضَ')">ضَ</span><span class="iqra-word" onclick="speakArabic('ضِ')">ضِ</span><span class="iqra-word" onclick="speakArabic('ضُ')">ضُ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('صاحِبُ أَبي بائِعٌ غَنِيٌّ.')">صاحِبُ أَبي بائِعٌ غَنِيٌّ.</div><div class="iqra-phrase" onclick="speakArabic('كانَ أَخي شابًّا ضَعيفًا.')">كانَ أَخي شابًّا ضَعيفًا.</div><div class="iqra-phrase" onclick="speakArabic('أَنَصْحَبُ أَبانا؟')">أَنَصْحَبُ أَبانا؟</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('بَيْضٌ')">بَيْضٌ</div><div class="iqra-coran-item" onclick="speakArabic('أَبْيَضُ')">أَبْيَضُ</div><div class="iqra-coran-item" onclick="speakArabic('غَضَبٍ')">غَضَبٍ</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
@@ -4535,6 +4602,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" onclick="toggleCircle(this)">جَدِيد</span>
         </div>
         <p class="circle-legend">Cliquez sur les mots qui contiennent un د. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('دَغْدَغَ')">دَغْدَغَ</span><span class="iqra-word" onclick="speakArabic('دُبٌّ')">دُبٌّ</span><span class="iqra-word" onclick="speakArabic('جَديدٌ')">جَديدٌ</span><span class="iqra-word" onclick="speakArabic('دَفَعَ')">دَفَعَ</span><span class="iqra-word" onclick="speakArabic('سَجَدَ')">سَجَدَ</span><span class="iqra-word" onclick="speakArabic('كَدٌّ')">كَدٌّ</span><span class="iqra-word" onclick="speakArabic('بَديعٌ')">بَديعٌ</span><span class="iqra-word" onclick="speakArabic('دافِعٌ')">دافِعٌ</span><span class="iqra-word" onclick="speakArabic('ديكٌ')">ديكٌ</span><span class="iqra-word" onclick="speakArabic('هُدْهُدٌ')">هُدْهُدٌ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('أَنا جَديدٌ.')">أَنا جَديدٌ.</div><div class="iqra-phrase" onclick="speakArabic('صَديقي بَعيدٌ.')">صَديقي بَعيدٌ.</div><div class="iqra-phrase" onclick="speakArabic('هُنَّ نِساءٌ.')">هُنَّ نِساءٌ.</div><div class="iqra-phrase" onclick="speakArabic('سَجَدَ إِنْسانٌ.')">سَجَدَ إِنْسانٌ.</div><div class="iqra-phrase" onclick="speakArabic('دافِعُهُ خَفيفٌ.')">دافِعُهُ خَفيفٌ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('أَحَدٌ')">أَحَدٌ</div><div class="iqra-coran-item" onclick="speakArabic('عَبْدٌ')">عَبْدٌ</div><div class="iqra-coran-item" onclick="speakArabic('جَدِيدٌ')">جَدِيدٌ</div><div class="iqra-coran-item" onclick="speakArabic('وَدُودٌ')">وَدُودٌ</div></div>
+        </div>
       </div>
     </section>
 
@@ -4741,6 +4821,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('جَذَبَ')">جَذَبَ</span><span class="iqra-word" onclick="speakArabic('كَذا')">كَذا</span><span class="iqra-word" onclick="speakArabic('نَبَذَ')">نَبَذَ</span><span class="iqra-word" onclick="speakArabic('حَذَفَ')">حَذَفَ</span><span class="iqra-word" onclick="speakArabic('بَدَنٌ')">بَدَنٌ</span><span class="iqra-word" onclick="speakArabic('أُذُنْ')">أُذُنْ</span><span class="iqra-word" onclick="speakArabic('فُنْدُقٌ')">فُنْدُقٌ</span><span class="iqra-word" onclick="speakArabic('أَذانْ')">أَذانْ</span><span class="iqra-word" onclick="speakArabic('نَبيذٌ')">نَبيذٌ</span><span class="iqra-word" onclick="speakArabic('آذانْ')">آذانْ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('هَذا ذِئْبٌ.')">هَذا ذِئْبٌ.</div><div class="iqra-phrase" onclick="speakArabic('هَذا أَخوهُ.')">هَذا أَخوهُ.</div><div class="iqra-phrase" onclick="speakArabic('هَذا جَديدٌ.')">هَذا جَديدٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَنا في سِجْنٍ.')">أَنا في سِجْنٍ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('أَعُوذُ')">أَعُوذُ</div><div class="iqra-coran-item" onclick="speakArabic('عَذَابٌ')">عَذَابٌ</div><div class="iqra-coran-item" onclick="speakArabic('نَبَذَ')">نَبَذَ</div><div class="iqra-coran-item" onclick="speakArabic('أَخَذَ')">أَخَذَ</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
@@ -4939,6 +5032,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" onclick="toggleCircle(this)">تَكَاثُر</span>
         </div>
         <p class="circle-legend">Cliquez sur les mots qui contiennent un ت. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('تابَ')">تابَ</span><span class="iqra-word" onclick="speakArabic('فَتَّشَ')">فَتَّشَ</span><span class="iqra-word" onclick="speakArabic('تَبِعَ')">تَبِعَ</span><span class="iqra-word" onclick="speakArabic('خَبَّأَتْ')">خَبَّأَتْ</span><span class="iqra-word" onclick="speakArabic('تَحْتَ')">تَحْتَ</span><span class="iqra-word" onclick="speakArabic('غِبْتَ')">غِبْتَ</span><span class="iqra-word" onclick="speakArabic('دَبّابَةٌ')">دَبّابَةٌ</span><span class="iqra-word" onclick="speakArabic('ساعَةٌ')">ساعَةٌ</span><span class="iqra-word" onclick="speakArabic('سَجَدْتُ')">سَجَدْتُ</span><span class="iqra-word" onclick="speakArabic('دَجاجَةٌ')">دَجاجَةٌ</span><span class="iqra-word" onclick="speakArabic('هاتِفٌ')">هاتِفٌ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('هَذِهِ جَدَّتي.')">هَذِهِ جَدَّتي.</div><div class="iqra-phrase" onclick="speakArabic('بِنْتي أُخْتُكَ.')">بِنْتي أُخْتُكَ.</div><div class="iqra-phrase" onclick="speakArabic('كِتابي في بَيْتِكَ.')">كِتابي في بَيْتِكَ.</div><div class="iqra-phrase" onclick="speakArabic('أَأَنْتَ جَديدٌ؟')">أَأَنْتَ جَديدٌ؟</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('كِتَابٌ')">كِتَابٌ</div><div class="iqra-coran-item" onclick="speakArabic('تَابَ')">تَابَ</div><div class="iqra-coran-item" onclick="speakArabic('بَيْتٌ')">بَيْتٌ</div><div class="iqra-coran-item" onclick="speakArabic('نَبَاتٌ')">نَبَاتٌ</div><div class="iqra-coran-item" onclick="speakArabic('سَكَتَ')">سَكَتَ</div></div>
+        </div>
       </div>
     </section>
 
@@ -5145,6 +5251,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('ثابَ')">ثابَ</span><span class="iqra-word" onclick="speakArabic('بَحَثَ')">بَحَثَ</span><span class="iqra-word" onclick="speakArabic('ثِقَةٌ')">ثِقَةٌ</span><span class="iqra-word" onclick="speakArabic('باحِثَةٌ')">باحِثَةٌ</span><span class="iqra-word" onclick="speakArabic('بَثَّ')">بَثَّ</span><span class="iqra-word" onclick="speakArabic('بَثَّتْ')">بَثَّتْ</span><span class="iqra-word" onclick="speakArabic('ثُعْبانٌ')">ثُعْبانٌ</span><span class="iqra-word" onclick="speakArabic('نَفَثَ')">نَفَثَ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('هَذِهِ تُفّاحَةٌ.')">هَذِهِ تُفّاحَةٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَنا سَعيدٌ.')">أَنا سَعيدٌ.</div><div class="iqra-phrase" onclick="speakArabic('أَخي ضاحِكٌ.')">أَخي ضاحِكٌ.</div><div class="iqra-phrase" onclick="speakArabic('بَحَثْتُ عَنْ أَبيها.')">بَحَثْتُ عَنْ أَبيها.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('بَعَثَ')">بَعَثَ</div><div class="iqra-coran-item" onclick="speakArabic('حَدِيثٌ')">حَدِيثٌ</div><div class="iqra-coran-item" onclick="speakArabic('نَفَثَ')">نَفَثَ</div><div class="iqra-coran-item" onclick="speakArabic('ثَبَتَ')">ثَبَتَ</div><div class="iqra-coran-item" onclick="speakArabic('أَثَاثًا')">أَثَاثًا</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
@@ -5347,6 +5466,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('أُمٌّ')">أُمٌّ</span><span class="iqra-word" onclick="speakArabic('قَدِمَ')">قَدِمَ</span><span class="iqra-word" onclick="speakArabic('مَسَحَ')">مَسَحَ</span><span class="iqra-word" onclick="speakArabic('مَدِينَةٌ')">مَدِينَةٌ</span><span class="iqra-word" onclick="speakArabic('مَعَ')">مَعَ</span><span class="iqra-word" onclick="speakArabic('سَمَكَةٌ')">سَمَكَةٌ</span><span class="iqra-word" onclick="speakArabic('مَسْجِدٌ')">مَسْجِدٌ</span><span class="iqra-word" onclick="speakArabic('مِمْحاةٌ')">مِمْحاةٌ</span><span class="iqra-word" onclick="speakArabic('مي')">مي</span><span class="iqra-word" onclick="speakArabic('مُّ')">مُّ</span><span class="iqra-word" onclick="speakArabic('سَمَّمَ')">سَمَّمَ</span><span class="iqra-word" onclick="speakArabic('مَساجِدٌ')">مَساجِدٌ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('مُحَمَّدٌ في مَسْجِدِ مَدِينَتِهِ. إِمامُهُ اِسْمُهُ عُثْمان.')">مُحَمَّدٌ في مَسْجِدِ مَدِينَتِهِ. إِمامُهُ اِسْمُهُ عُثْمان.</div><div class="iqra-phrase" onclick="speakArabic('أُمُّ مُحَمَّدٍ مَعَ صَدِيقاتِها. هُنَّ نِساءٌ مُؤْمِناتٌ صادِقاتٌ.')">أُمُّ مُحَمَّدٍ مَعَ صَدِيقاتِها. هُنَّ نِساءٌ مُؤْمِناتٌ صادِقاتٌ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('صُمٌّ بُكْمٌ')">صُمٌّ بُكْمٌ</div><div class="iqra-coran-item" onclick="speakArabic('وَنَفْسٍ وَمَا سَوَّاهَا')">وَنَفْسٍ وَمَا سَوَّاهَا</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
@@ -5545,6 +5677,19 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" onclick="toggleCircle(this)">مُؤْمِنُون</span>
         </div>
         <p class="circle-legend">Cliquez sur les mots qui contiennent un و. Certains n'en contiennent pas !</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Iqra · Je lis</h2><span class="section-title-lesson-ar">إِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
+      <div class="iqra-block">
+        <p class="iqra-hint">Lis à voix haute, en continu : d'abord les mots, puis les phrases. Cliquez pour écouter.</p>
+        <div class="iqra-words"><span class="iqra-word" onclick="speakArabic('أَوْ')">أَوْ</span><span class="iqra-word" onclick="speakArabic('وَأَدَ')">وَأَدَ</span><span class="iqra-word" onclick="speakArabic('واحِدٌ')">واحِدٌ</span><span class="iqra-word" onclick="speakArabic('وِسادَةٌ')">وِسادَةٌ</span><span class="iqra-word" onclick="speakArabic('واجِبٌ')">واجِبٌ</span><span class="iqra-word" onclick="speakArabic('وَفَقَ')">وَفَقَ</span><span class="iqra-word" onclick="speakArabic('تَوْفيقٌ')">تَوْفيقٌ</span><span class="iqra-word" onclick="speakArabic('قَهْوَةٌ')">قَهْوَةٌ</span><span class="iqra-word" onclick="speakArabic('صَوابٌ')">صَوابٌ</span><span class="iqra-word" onclick="speakArabic('وَسْوَسَ')">وَسْوَسَ</span><span class="iqra-word" onclick="speakArabic('سُوقٌ')">سُوقٌ</span></div>
+        <div class="iqra-phrases"><div class="iqra-phrase" onclick="speakArabic('وَقَفَ أَحْمَدُ أَمامَ أَبْوابِ الجامِعَةِ.')">وَقَفَ أَحْمَدُ أَمامَ أَبْوابِ الجامِعَةِ.</div><div class="iqra-phrase" onclick="speakArabic('هَذِهِ جامِعَةٌ جَديدَةٌ. فيها مَكْتَبَةٌ واسِعَةٌ وَجَديدَةٌ.')">هَذِهِ جامِعَةٌ جَديدَةٌ. فيها مَكْتَبَةٌ واسِعَةٌ وَجَديدَةٌ.</div></div>
+        <div class="iqra-coran">
+          <div class="iqra-coran-title">Iqra · dans le Coran ☾</div>
+          <div class="iqra-coran-items"><div class="iqra-coran-item" onclick="speakArabic('وَتَوَاصَوْا')">وَتَوَاصَوْا</div><div class="iqra-coran-item" onclick="speakArabic('وَقَدْ خَابَ مَن دَسَّاهَا')">وَقَدْ خَابَ مَن دَسَّاهَا</div></div>
+        </div>
       </div>
     </section>
 
