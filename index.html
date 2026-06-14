@@ -796,6 +796,7 @@ body::before {
 .phon-toggle:hover{filter:brightness(1.12);}
 .phon-toggle.on{background:var(--em,#0F6E5C);border-color:var(--em,#0F6E5C);}
 body:not(.phon-on) .phon{display:none !important;}
+body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
 @media print{.phon-toggle{display:none !important;}}
 </style>
 </head>
@@ -1189,7 +1190,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">بَاء</div><div class="info-card-trans">Bâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">بَاء</div><div class="info-card-trans phon">Bâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">B</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">1 / 28</div><div class="info-card-trans">première leçon</div></div>
     </div>
@@ -1372,7 +1373,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">كَاف</div><div class="info-card-trans">Kâf</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">كَاف</div><div class="info-card-trans phon">Kâf</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">K</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">2 / 28</div><div class="info-card-trans">deuxième leçon</div></div>
     </div>
@@ -1587,7 +1588,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">قَاف</div><div class="info-card-trans">Qâf</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">قَاف</div><div class="info-card-trans phon">Qâf</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">Q</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">3 / 28</div><div class="info-card-trans">troisième leçon</div></div>
     </div>
@@ -1807,7 +1808,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">فَاء</div><div class="info-card-trans">Fâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">فَاء</div><div class="info-card-trans phon">Fâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">F</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">4 / 28</div><div class="info-card-trans">quatrième leçon</div></div>
     </div>
@@ -2009,7 +2010,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">نُون</div><div class="info-card-trans">Nûn</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">نُون</div><div class="info-card-trans phon">Nûn</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">N</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">5 / 28</div><div class="info-card-trans">cinquième leçon</div></div>
     </div>
@@ -2211,7 +2212,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">جِيم</div><div class="info-card-trans">Jîm</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">جِيم</div><div class="info-card-trans phon">Jîm</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">J</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">6 / 28</div><div class="info-card-trans">sixième leçon</div></div>
     </div>
@@ -2413,7 +2414,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">خَاء</div><div class="info-card-trans">Khâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">خَاء</div><div class="info-card-trans phon">Khâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">KH</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">7 / 28</div><div class="info-card-trans">septième leçon</div></div>
     </div>
@@ -2615,7 +2616,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">حَاء</div><div class="info-card-trans">Ḥâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">حَاء</div><div class="info-card-trans phon">Ḥâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">Ḥ</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">8 / 28</div><div class="info-card-trans">huitième leçon</div></div>
     </div>
@@ -2816,7 +2817,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">هَاء</div><div class="info-card-trans">Hâ' douce</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">هَاء</div><div class="info-card-trans phon">Hâ' douce</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">H</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">9 / 28</div><div class="info-card-trans">neuvième leçon</div></div>
     </div>
@@ -3017,7 +3018,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">هَمْزَة</div><div class="info-card-trans">Hamza</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">هَمْزَة</div><div class="info-card-trans phon">Hamza</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">’ (glotte)</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">10 / 28</div><div class="info-card-trans">dixième leçon</div></div>
     </div>
@@ -3219,7 +3220,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">عَيْن</div><div class="info-card-trans">'Ayn</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">عَيْن</div><div class="info-card-trans phon">'Ayn</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">’A (gorge)</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">11 / 28</div><div class="info-card-trans">onzième leçon</div></div>
     </div>
@@ -3420,7 +3421,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">غَيْن</div><div class="info-card-trans">Ghayn</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">غَيْن</div><div class="info-card-trans phon">Ghayn</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">GH</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">12 / 28</div><div class="info-card-trans">douzième leçon</div></div>
     </div>
@@ -3622,7 +3623,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">سِين</div><div class="info-card-trans">Sîn</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">سِين</div><div class="info-card-trans phon">Sîn</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">S</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">13 / 28</div><div class="info-card-trans">treizième leçon</div></div>
     </div>
@@ -3820,7 +3821,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">شِين</div><div class="info-card-trans">Shîn</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">شِين</div><div class="info-card-trans phon">Shîn</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">SH</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">14 / 28</div><div class="info-card-trans">quatorzième leçon</div></div>
     </div>
@@ -4019,7 +4020,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">صَاد</div><div class="info-card-trans">Ṣâd</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">صَاد</div><div class="info-card-trans phon">Ṣâd</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">Ṣ (emphatique)</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">15 / 28</div><div class="info-card-trans">quinzième leçon</div></div>
     </div>
@@ -4220,7 +4221,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ضَاد</div><div class="info-card-trans">Ḍâd</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ضَاد</div><div class="info-card-trans phon">Ḍâd</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">Ḍ (emphatique)</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">16 / 28</div><div class="info-card-trans">seizième leçon</div></div>
     </div>
@@ -4422,7 +4423,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">دَال</div><div class="info-card-trans">Dâl</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">دَال</div><div class="info-card-trans phon">Dâl</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">D</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">17 / 28</div><div class="info-card-trans">dix-septième leçon</div></div>
     </div>
@@ -4623,7 +4624,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ذَال</div><div class="info-card-trans">Dhâl</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ذَال</div><div class="info-card-trans phon">Dhâl</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">DH</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">18 / 28</div><div class="info-card-trans">dix-huitième leçon</div></div>
     </div>
@@ -4825,7 +4826,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">تَاء</div><div class="info-card-trans">Tâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">تَاء</div><div class="info-card-trans phon">Tâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">T</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">19 / 28</div><div class="info-card-trans">dix-neuvième leçon</div></div>
     </div>
@@ -5027,7 +5028,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ثَاء</div><div class="info-card-trans">Thâ'</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">ثَاء</div><div class="info-card-trans phon">Thâ'</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">TH</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">20 / 28</div><div class="info-card-trans">vingtième leçon</div></div>
     </div>
@@ -5230,7 +5231,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">مِيم</div><div class="info-card-trans">Mîm</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">مِيم</div><div class="info-card-trans phon">Mîm</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">M</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">21 / 28</div><div class="info-card-trans">vingt-et-unième leçon</div></div>
     </div>
@@ -5432,7 +5433,7 @@ body:not(.phon-on) .phon{display:none !important;}
     </div>
 
     <div class="info-row">
-      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">وَاو</div><div class="info-card-trans">Wâw</div></div>
+      <div class="info-card"><div class="info-card-label">Nom</div><div class="info-card-value">وَاو</div><div class="info-card-trans phon">Wâw</div></div>
       <div class="info-card phon"><div class="info-card-label">Son</div><div class="info-card-value">W</div></div>
       <div class="info-card"><div class="info-card-label">Ordre</div><div class="info-card-value">22 / 28</div><div class="info-card-trans">vingt-deuxième leçon</div></div>
     </div>
