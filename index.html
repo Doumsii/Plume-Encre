@@ -813,6 +813,20 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
 .iqra-coran-items{display:flex;flex-direction:column;gap:10px;align-items:center;direction:rtl;}
 .iqra-coran-item{font-family:'Amiri',serif;font-size:27px;color:var(--bleu-nuit);cursor:pointer;transition:color .2s ease;}
 .iqra-coran-item:hover{color:var(--emeraude);}
+
+.dictee-block{ margin:8px 0 4px;}
+.dictee-intro{ font-style:italic; color:var(--sepia,#8a7a55); margin-bottom:16px;}
+.dictee-item{ border:1px solid rgba(191,160,106,.35); border-radius:10px; padding:14px 16px; margin-bottom:12px; background:rgba(255,255,255,.4);}
+.dictee-row{ display:flex; align-items:center; gap:12px;}
+.dictee-num{ width:26px; height:26px; border-radius:50%; background:var(--emeraude,#0F6E5C); color:#fff; display:flex; align-items:center; justify-content:center; font-style:italic; flex:0 0 auto;}
+.dictee-play{ background:var(--emeraude,#0F6E5C); color:#fff; border:none; border-radius:20px; padding:7px 16px; cursor:pointer; font-family:inherit; font-size:.92rem;}
+.dictee-play:hover{ opacity:.9;}
+.dictee-reveal{ background:transparent; color:var(--or,#BFA06A); border:1px solid var(--or,#BFA06A); border-radius:20px; padding:7px 16px; cursor:pointer; font-family:inherit; font-size:.92rem;}
+.dictee-reveal:disabled{ opacity:.4; cursor:not-allowed;}
+.dictee-reveal.ready{ background:var(--or,#BFA06A); color:#fff;}
+.dictee-answer{ display:none; margin-top:12px; font-family:'Amiri',serif; font-size:1.9rem; direction:rtl; text-align:center; color:var(--nuit,#0B1326);}
+.dictee-answer.show{ display:block;}
+
 </style>
 </head>
 <body>
@@ -4265,12 +4279,84 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="exercise-block">
         <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre ص dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ صَاد ؟</div></div></div>
         <div class="exercise-grid">
-          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ص')"><div class="exercise-word">صَلَاة</div><div class="exercise-word-translit"><span class="coran"><span class="phon">ṣalâh — </span>la prière ☪</span></div></div>
-          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ص')"><div class="exercise-word">صَدْر</div><div class="exercise-word-translit"><span class="coran"><span class="phon">ṣadr — </span>la poitrine ☪</span></div></div>
-          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ص')"><div class="exercise-word">نَصْر</div><div class="exercise-word-translit"><span class="coran"><span class="phon">naṣr — </span>le secours ☪</span></div></div>
-          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ص')"><div class="exercise-word">صَابُون</div><div class="exercise-word-translit"><span class="phon">ṣâbûn — </span>le savon</div></div>
-          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ص')"><div class="exercise-word">صَنْدُوق</div><div class="exercise-word-translit"><span class="phon">ṣandûq — </span>la boîte</div></div>
-          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ص')"><div class="exercise-word">قَفَص</div><div class="exercise-word-translit"><span class="phon">qafaṣ — </span>la cage</div></div>
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صَلَاة</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ṣalâh — </span>la prière ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صَدْر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ṣadr — </span>la poitrine ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">نَصْر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">naṣr — </span>le secours ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صِرَاط</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ṣirâṭ — </span>le chemin ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">عَصْر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">'aṣr — </span>le temps ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">بَصَر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">baṣar — </span>la vue ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="7" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صَابُون</div>
+<div class="exercise-word-translit">
+<span class="phon">ṣâbûn — </span>le savon
+</div>
+</div>
+          <div class="exercise-item" data-num="8" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صَنْدُوق</div>
+<div class="exercise-word-translit">
+<span class="phon">ṣandûq — </span>la boîte
+</div>
+</div>
+          <div class="exercise-item" data-num="9" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">قَفَص</div>
+<div class="exercise-word-translit">
+<span class="phon">qafaṣ — </span>la cage
+</div>
+</div>
+          <div class="exercise-item" data-num="10" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">صَحْن</div>
+<div class="exercise-word-translit">
+<span class="phon">ṣaḥn — </span>l'assiette
+</div>
+</div>
+          <div class="exercise-item" data-num="11" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">مِقَصّ</div>
+<div class="exercise-word-translit">
+<span class="phon">miqaṣṣ — </span>les ciseaux
+</div>
+</div>
+          <div class="exercise-item" data-num="12" onclick="revealLetter(this,'ص')">
+<div class="exercise-word">رَصِيف</div>
+<div class="exercise-word-translit">
+<span class="phon">raṣîf — </span>le trottoir
+</div>
+</div>
         </div>
         <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
       </div>
@@ -4340,6 +4426,26 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+            <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Dictée</h2><span class="section-title-lesson-ar">الإِمْلَاء</span><div class="section-title-lesson-line"></div></div>
+      <div class="dictee-block">
+        <p class="dictee-intro">Écoute l'audio <strong>en entier</strong>, écris sur ta feuille, puis clique sur « Révéler » pour corriger.</p>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">1</span><button class="dictee-play" onclick="dicteePlay(this,'صَبَاحٌ حَسَنٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">صَبَاحٌ حَسَنٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">2</span><button class="dictee-play" onclick="dicteePlay(this,'حِصَانٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">حِصَانٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">3</span><button class="dictee-play" onclick="dicteePlay(this,'عَصًا.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">عَصًا.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">4</span><button class="dictee-play" onclick="dicteePlay(this,'نَصَحَ صَاحِبَهُ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">نَصَحَ صَاحِبَهُ.</div>
+</div>
+      </div>
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
       <div class="audio-section">
         <h3 class="audio-title">Lis et récite à voix haute</h3>
@@ -4480,12 +4586,84 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="exercise-block">
         <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre ض dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ ضَاد ؟</div></div></div>
         <div class="exercise-grid">
-          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ض')"><div class="exercise-word">ضُحَى</div><div class="exercise-word-translit"><span class="coran"><span class="phon">ḍuḥâ — </span>la clarté du matin ☪</span></div></div>
-          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ض')"><div class="exercise-word">أَرْض</div><div class="exercise-word-translit"><span class="coran"><span class="phon">arḍ — </span>la terre ☪</span></div></div>
-          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ض')"><div class="exercise-word">غَضَب</div><div class="exercise-word-translit"><span class="coran"><span class="phon">ghaḍab — </span>la colère ☪</span></div></div>
-          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ض')"><div class="exercise-word">ضَوْء</div><div class="exercise-word-translit"><span class="phon">ḍaw' — </span>la lumière</div></div>
-          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ض')"><div class="exercise-word">بَيْض</div><div class="exercise-word-translit"><span class="phon">bayḍ — </span>les œufs</div></div>
-          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ض')"><div class="exercise-word">أَخْضَر</div><div class="exercise-word-translit"><span class="phon">akhḍar — </span>vert</div></div>
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضُحَى</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ḍuḥâ — </span>la clarté du matin ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">أَرْض</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">arḍ — </span>la terre ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">غَضَب</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ghaḍab — </span>la colère ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضَبْح</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ḍabḥ — </span>le halètement ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضَلَال</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ḍalâl — </span>l'égarement ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضَرِيع</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ḍarî' — </span>plante amère ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="7" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضَوْء</div>
+<div class="exercise-word-translit">
+<span class="phon">ḍaw' — </span>la lumière
+</div>
+</div>
+          <div class="exercise-item" data-num="8" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">بَيْض</div>
+<div class="exercise-word-translit">
+<span class="phon">bayḍ — </span>les œufs
+</div>
+</div>
+          <div class="exercise-item" data-num="9" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">أَخْضَر</div>
+<div class="exercise-word-translit">
+<span class="phon">akhḍar — </span>vert
+</div>
+</div>
+          <div class="exercise-item" data-num="10" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضَيْف</div>
+<div class="exercise-word-translit">
+<span class="phon">ḍayf — </span>l'invité
+</div>
+</div>
+          <div class="exercise-item" data-num="11" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">ضِرْس</div>
+<div class="exercise-word-translit">
+<span class="phon">ḍirs — </span>la molaire
+</div>
+</div>
+          <div class="exercise-item" data-num="12" onclick="revealLetter(this,'ض')">
+<div class="exercise-word">رِيَاضَة</div>
+<div class="exercise-word-translit">
+<span class="phon">riyâḍa — </span>le sport
+</div>
+</div>
         </div>
         <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
       </div>
@@ -4555,6 +4733,26 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+            <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Dictée</h2><span class="section-title-lesson-ar">الإِمْلَاء</span><div class="section-title-lesson-line"></div></div>
+      <div class="dictee-block">
+        <p class="dictee-intro">Écoute l'audio <strong>en entier</strong>, écris sur ta feuille, puis clique sur « Révéler » pour corriger.</p>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">1</span><button class="dictee-play" onclick="dicteePlay(this,'غَضِبَ عَبَّاسٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">غَضِبَ عَبَّاسٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">2</span><button class="dictee-play" onclick="dicteePlay(this,'نَهَضَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">نَهَضَ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">3</span><button class="dictee-play" onclick="dicteePlay(this,'قَبَضَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">قَبَضَ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">4</span><button class="dictee-play" onclick="dicteePlay(this,'حَوْضٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">حَوْضٌ.</div>
+</div>
+      </div>
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
       <div class="audio-section">
         <h3 class="audio-title">Lis et récite à voix haute</h3>
@@ -4694,12 +4892,86 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="exercise-block">
         <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre د dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ دَال ؟</div></div></div>
         <div class="exercise-grid">
-          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'د')"><div class="exercise-word">دِين</div><div class="exercise-word-translit"><span class="coran"><span class="phon">dîn — </span>la religion ☪</span></div></div>
-          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'د')"><div class="exercise-word">حَمْد</div><div class="exercise-word-translit"><span class="coran"><span class="phon">ḥamd — </span>la louange ☪</span></div></div>
-          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'د')"><div class="exercise-word">عَبْد</div><div class="exercise-word-translit"><span class="coran"><span class="phon">'abd — </span>le serviteur ☪</span></div></div>
-          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'د')"><div class="exercise-word">وَلَد</div><div class="exercise-word-translit"><span class="coran"><span class="phon">walad — </span>l'enfant ☪</span></div></div>
-          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'د')"><div class="exercise-word">دَار</div><div class="exercise-word-translit"><span class="phon">dâr — </span>la maison</div></div>
-          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'د')"><div class="exercise-word">يَد</div><div class="exercise-word-translit"><span class="coran"><span class="phon">yad — </span>la main ☪</span></div></div>
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'د')">
+<div class="exercise-word">دِين</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">dîn — </span>la religion ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'د')">
+<div class="exercise-word">حَمْد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ḥamd — </span>la louange ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'د')">
+<div class="exercise-word">عَبْد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">'abd — </span>le serviteur ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'د')">
+<div class="exercise-word">وَلَد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">walad — </span>l'enfant ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'د')">
+<div class="exercise-word">دَار</div>
+<div class="exercise-word-translit">
+<span class="phon">dâr — </span>la maison
+</div>
+</div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'د')">
+<div class="exercise-word">يَد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">yad — </span>la main ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="7" onclick="revealLetter(this,'د')">
+<div class="exercise-word">أَحَد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">aḥad — </span>l'Unique ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="8" onclick="revealLetter(this,'د')">
+<div class="exercise-word">بَلَد</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">balad — </span>la cité ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="9" onclick="revealLetter(this,'د')">
+<div class="exercise-word">صَدْر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">ṣadr — </span>la poitrine ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="10" onclick="revealLetter(this,'د')">
+<div class="exercise-word">جَدِيد</div>
+<div class="exercise-word-translit">
+<span class="phon">jadîd — </span>nouveau
+</div>
+</div>
+          <div class="exercise-item" data-num="11" onclick="revealLetter(this,'د')">
+<div class="exercise-word">عَدَد</div>
+<div class="exercise-word-translit">
+<span class="phon">'adad — </span>le nombre
+</div>
+</div>
+          <div class="exercise-item" data-num="12" onclick="revealLetter(this,'د')">
+<div class="exercise-word">مَسْجِد</div>
+<div class="exercise-word-translit">
+<span class="phon">masjid — </span>la mosquée
+</div>
+</div>
         </div>
         <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
       </div>
@@ -4769,6 +5041,30 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+            <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Dictée</h2><span class="section-title-lesson-ar">الإِمْلَاء</span><div class="section-title-lesson-line"></div></div>
+      <div class="dictee-block">
+        <p class="dictee-intro">Écoute l'audio <strong>en entier</strong>, écris sur ta feuille, puis clique sur « Révéler » pour corriger.</p>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">1</span><button class="dictee-play" onclick="dicteePlay(this,'صَدِيقٌ جَدِيدٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">صَدِيقٌ جَدِيدٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">2</span><button class="dictee-play" onclick="dicteePlay(this,'عَبْدٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">عَبْدٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">3</span><button class="dictee-play" onclick="dicteePlay(this,'عَدَدٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">عَدَدٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">4</span><button class="dictee-play" onclick="dicteePlay(this,'جَسَدٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">جَسَدٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">5</span><button class="dictee-play" onclick="dicteePlay(this,'قَصَدَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">قَصَدَ.</div>
+</div>
+      </div>
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
       <div class="audio-section">
         <h3 class="audio-title">Lis et récite à voix haute</h3>
@@ -4909,12 +5205,86 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="exercise-block">
         <div class="exercise-intro"><div class="exercise-intro-left"><div class="exercise-num">Exercice 1</div><div class="exercise-intro-fr">Où se trouve la lettre ذ dans chaque mot ?</div><div class="exercise-intro-ar">أَيْنَ حَرْفُ ذَال ؟</div></div></div>
         <div class="exercise-grid">
-          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ذ')"><div class="exercise-word">ذِكْر</div><div class="exercise-word-translit"><span class="coran"><span class="phon">dhikr — </span>le rappel d'Allah ☪</span></div></div>
-          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ذ')"><div class="exercise-word">ذَهَب</div><div class="exercise-word-translit"><span class="coran"><span class="phon">dhahab — </span>l'or ☪</span></div></div>
-          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ذ')"><div class="exercise-word">إِذَا</div><div class="exercise-word-translit"><span class="coran"><span class="phon">idhâ — </span>lorsque ☪</span></div></div>
-          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ذ')"><div class="exercise-word">لَذِيذ</div><div class="exercise-word-translit"><span class="phon">ladhîdh — </span>délicieux</div></div>
-          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ذ')"><div class="exercise-word">ذُو</div><div class="exercise-word-translit"><span class="coran"><span class="phon">dhû — </span>celui qui possède ☪</span></div></div>
-          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ذ')"><div class="exercise-word">أَعُوذ</div><div class="exercise-word-translit"><span class="coran"><span class="phon">a'ûdh — </span>je me réfugie ☪</span></div></div>
+          <div class="exercise-item" data-num="1" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">ذِكْر</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">dhikr — </span>le rappel d'Allah ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="2" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">ذَهَب</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">dhahab — </span>l'or ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="3" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">إِذَا</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">idhâ — </span>lorsque ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="4" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">لَذِيذ</div>
+<div class="exercise-word-translit">
+<span class="phon">ladhîdh — </span>délicieux
+</div>
+</div>
+          <div class="exercise-item" data-num="5" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">ذُو</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">dhû — </span>celui qui possède ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="6" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">أَعُوذ</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">a'ûdh — </span>je me réfugie ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="7" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">هَذَا</div>
+<div class="exercise-word-translit">
+<span class="phon">hâdhâ — </span>ceci
+</div>
+</div>
+          <div class="exercise-item" data-num="8" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">أَخَذَ</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">akhadha — </span>il a pris ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="9" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">عَذَاب</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">'adhâb — </span>le châtiment ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="10" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">ذَكَرَ</div>
+<div class="exercise-word-translit">
+<span class="coran">
+<span class="phon">dhakara — </span>il a mentionné ☪</span>
+</div>
+</div>
+          <div class="exercise-item" data-num="11" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">تِلْمِيذ</div>
+<div class="exercise-word-translit">
+<span class="phon">tilmîdh — </span>l'élève
+</div>
+</div>
+          <div class="exercise-item" data-num="12" onclick="revealLetter(this,'ذ')">
+<div class="exercise-word">نَافِذَة</div>
+<div class="exercise-word-translit">
+<span class="phon">nâfidha — </span>la fenêtre
+</div>
+</div>
         </div>
         <p class="helper-text">Cliquez pour révéler. <span style="color:var(--emeraude);">☪ = mot du Coran</span></p>
       </div>
@@ -4984,6 +5354,30 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </section>
 
     <section class="section">
+            <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Dictée</h2><span class="section-title-lesson-ar">الإِمْلَاء</span><div class="section-title-lesson-line"></div></div>
+      <div class="dictee-block">
+        <p class="dictee-intro">Écoute l'audio <strong>en entier</strong>, écris sur ta feuille, puis clique sur « Révéler » pour corriger.</p>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">1</span><button class="dictee-play" onclick="dicteePlay(this,'هَذَا جَدِيدٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">هَذَا جَدِيدٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">2</span><button class="dictee-play" onclick="dicteePlay(this,'أَخَذَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">أَخَذَ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">3</span><button class="dictee-play" onclick="dicteePlay(this,'نَبَذَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">نَبَذَ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">4</span><button class="dictee-play" onclick="dicteePlay(this,'عَذَابٌ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">عَذَابٌ.</div>
+</div>
+<div class="dictee-item">
+  <div class="dictee-row"><span class="dictee-num">5</span><button class="dictee-play" onclick="dicteePlay(this,'جَذَبَ.')">▶ Écouter</button><button class="dictee-reveal" onclick="dicteeReveal(this)" disabled>Révéler</button></div>
+  <div class="dictee-answer">جَذَبَ.</div>
+</div>
+      </div>
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">À ton tour</h2><span class="section-title-lesson-ar">اِقْرَأْ</span><div class="section-title-lesson-line"></div></div>
       <div class="audio-section">
         <h3 class="audio-title">Lis et récite à voix haute</h3>
@@ -6323,6 +6717,25 @@ function togglePhon(){
     if(b){ b.textContent='Phonétique : ON'; b.classList.add('on'); b.setAttribute('aria-pressed','true'); }
   }}catch(e){}
 })();
+</script>
+
+<script>
+function dicteePlay(btn,text){
+  try{ speechSynthesis.cancel(); }catch(e){}
+  var u=new SpeechSynthesisUtterance(text.replace(/[.\u061F]/g,''));
+  u.lang='ar-SA'; u.rate=0.82;
+  var item=btn.closest('.dictee-item');
+  var rev=item.querySelector('.dictee-reveal');
+  u.onend=function(){ rev.disabled=false; rev.classList.add('ready'); };
+  btn.textContent='▶ Écouter';
+  speechSynthesis.speak(u);
+}
+function dicteeReveal(btn){
+  if(btn.disabled) return;
+  var item=btn.closest('.dictee-item');
+  item.querySelector('.dictee-answer').classList.add('show');
+  btn.style.display='none';
+}
 </script>
 </body>
 </html>
