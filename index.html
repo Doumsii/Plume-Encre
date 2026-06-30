@@ -457,7 +457,7 @@ body::before {
 .harakat-row-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0 8px; max-width: 480px; margin-left: auto; margin-right: auto; direction: rtl; }
 .harakat-cell { background: white; border: 1px solid var(--or-mat); border-radius: 4px; padding: 12px 6px; text-align: center; direction: ltr; }
 .harakat-cell-name { font-family: 'Playfair Display', serif; font-style: italic; font-size: 10px; color: var(--sepia-clair); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
-.harakat-cell-example { font-family: 'Amiri', serif; font-size: 26px; color: var(--bleu-nuit); line-height: 1; margin: 6px 0; direction: rtl; }
+.harakat-cell-example { font-family: 'Amiri', serif; font-size: 26px; color: var(--bleu-nuit); line-height: 1; margin: 14px 0 6px 0; direction: rtl; }
 .harakat-cell-sound { font-family: 'Playfair Display', serif; font-style: italic; font-size: 11px; color: var(--emeraude); }
 
 .usage-step { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 22px; padding: 18px; background: white; border: 1px solid rgba(191,160,106,0.2); border-radius: 6px; transition: all 0.3s ease; }
@@ -821,10 +821,11 @@ body::before {
 }
 .perle-source {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--or);
-  opacity: 0.65;
+  color: var(--or-mat);
+  opacity: 1;
   margin-top: 12px;
   padding-top: 10px;
   border-top: 1px solid rgba(191,160,106,0.25);
@@ -1711,12 +1712,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Dis : "Ô vous les négateurs !" »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Falaq</div><div class="verset-mini-ref">— 113 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="kaf-v3" onclick="speakArabic('قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ')">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</div>
-          <div class="verset-mini-translation">« Dis : "Je cherche protection auprès du Seigneur de l'aube naissante" »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Qadr</div><div class="verset-mini-ref">— 97 : 2 —</div></div>
+          <div class="verset-mini-arabic" id="kaf-v3" onclick="speakArabic('وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ')">وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ</div>
+          <div class="verset-mini-translation">« Et qui te dira ce qu’est la nuit du Destin ? »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick="highlightMultiVersets(['kaf-v1','kaf-v2','kaf-v3'],['إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ','قُلْ يَا أَيُّهَا الْكَافِرُونَ','قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ'],'ك')">Mettre en évidence le ك</button>
+      <button class="versets-toggle-all" onclick="highlightMultiVersets(['kaf-v1','kaf-v2','kaf-v3'],['إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ','قُلْ يَا أَيُّهَا الْكَافِرُونَ','وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ'],'ك')">Mettre en évidence le ك</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ك qu'il contient.</p>
     </section>
 
@@ -1920,22 +1921,22 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Ikhlâs · Le Monothéisme pur</div><div class="verset-mini-ref">— 112 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="qaf-v1" onclick="speakArabic('قُلْ هُوَ اللَّهُ أَحَدٌ')">قُلْ هُوَ اللَّهُ أَحَدٌ</div>
-          <div class="verset-mini-translation">« Dis : "Lui, Allah, est Unique." »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Qamar</div><div class="verset-mini-ref">— 54 : 17 —</div></div>
+          <div class="verset-mini-arabic" id="qaf-v1" onclick="speakArabic('وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ')">وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ</div>
+          <div class="verset-mini-translation">« Nous avons rendu le Coran facile pour le rappel : y a-t-il quelqu’un pour s’en souvenir ? »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Falaq (2 fois le ق !)</div><div class="verset-mini-ref">— 113 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="qaf-v2" onclick="speakArabic('قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ')">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</div>
-          <div class="verset-mini-translation">« Dis : "Je cherche protection auprès du Seigneur de l'aube naissante" »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate ‘Abasa</div><div class="verset-mini-ref">— 80 : 17 —</div></div>
+          <div class="verset-mini-arabic" id="qaf-v2" onclick="speakArabic('قُتِلَ الْإِنْسَانُ مَا أَكْفَرَهُ')">قُتِلَ الْإِنْسَانُ مَا أَكْفَرَهُ</div>
+          <div class="verset-mini-translation">« Que périsse l’homme ! Comme il est ingrat ! »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Kawthar</div><div class="verset-mini-ref">— 108 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="qaf-v3" onclick="speakArabic('إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ')">إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ</div>
-          <div class="verset-mini-translation">« En vérité, Nous t'avons accordé l'Abondance. » <em>(retrouve les ك !)</em></div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Mursalât</div><div class="verset-mini-ref">— 77 : 23 —</div></div>
+          <div class="verset-mini-arabic" id="qaf-v3" onclick="speakArabic('فَقَدَرْنَا فَنِعْمَ الْقَادِرُونَ')">فَقَدَرْنَا فَنِعْمَ الْقَادِرُونَ</div>
+          <div class="verset-mini-translation">« Nous avons déterminé — et combien Nous sommes les meilleurs à déterminer ! »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick="highlightMultiVersets(['qaf-v1','qaf-v2','qaf-v3'],['قُلْ هُوَ اللَّهُ أَحَدٌ','قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ','إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ'],'ق')">Mettre en évidence le ق</button>
+      <button class="versets-toggle-all" onclick="highlightMultiVersets(['qaf-v1','qaf-v2','qaf-v3'],['وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِنْ مُدَّكِرٍ','قُتِلَ الْإِنْسَانُ مَا أَكْفَرَهُ','فَقَدَرْنَا فَنِعْمَ الْقَادِرُونَ'],'ق')">Mettre en évidence le ق</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ق qu'il contient.</p>
     </section>
 
@@ -2117,7 +2118,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">فُلْك</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">قَفّ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ف. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ف.</p>
       </div>
     </section>
 
@@ -2319,7 +2320,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">قُفْل</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">بَنَان</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ن. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ن.</p>
       </div>
     </section>
 
@@ -2337,12 +2338,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« "Sois !", et cela est. »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Falaq</div><div class="verset-mini-ref">— 113 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="nun-v3" onclick="speakArabic('قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ')">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</div>
-          <div class="verset-mini-translation">« Dis : "Je cherche protection auprès du Seigneur de l'aube naissante." »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Qalam</div><div class="verset-mini-ref">— 68 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="nun-v3" onclick="speakArabic('ن وَالْقَلَمِ وَمَا يَسْطُرُونَ')">نٓ وَالْقَلَمِ وَمَا يَسْطُرُونَ</div>
+          <div class="verset-mini-translation">« Noun. Par la plume et ce qu’ils écrivent ! »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["nun-v1", "nun-v2", "nun-v3"],["قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ", "كُنْ فَيَكُونُ", "قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ"],"ن")'>Mettre en évidence le ن</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["nun-v1", "nun-v2", "nun-v3"],["قُلْ أَعُوذُ بِرَبِّ النَّاسِ مَلِكِ النَّاسِ", "كُنْ فَيَكُونُ", "نٓ وَالْقَلَمِ وَمَا يَسْطُرُونَ"],"ن")'>Mettre en évidence le ن</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ن qu'il contient.</p>
     </section>
 
@@ -2521,7 +2522,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">كَفَن</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">جُود</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ج. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ج.</p>
       </div>
     </section>
 
@@ -2723,7 +2724,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">خُبْز</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">كَفَن</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un خ. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un خ.</p>
       </div>
     </section>
 
@@ -2741,12 +2742,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Non ! Je jure par les étoiles qui disparaissent ! »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Kawthar</div><div class="verset-mini-ref">— 108 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="kha-v3" onclick="speakArabic('إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ')">إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ</div>
-          <div class="verset-mini-translation">« En vérité, Nous t'avons accordé l'Abondance. »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-‘Alaq</div><div class="verset-mini-ref">— 96 : 2 —</div></div>
+          <div class="verset-mini-arabic" id="kha-v3" onclick="speakArabic('خَلَقَ الْإِنْسَانَ مِنْ عَلَقٍ')">خَلَقَ الْإِنْسَانَ مِنْ عَلَقٍ</div>
+          <div class="verset-mini-translation">« Il a créé l’homme à partir d’une adhérence. »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["kha-v1", "kha-v2", "kha-v3"],["قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِنْ شَرِّ مَا خَلَقَ", "فَلَا أُقْسِمُ بِالْخُنَّسِ", "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ"],"خ")'>Mettre en évidence le خ</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["kha-v1", "kha-v2", "kha-v3"],["قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِنْ شَرِّ مَا خَلَقَ", "فَلَا أُقْسِمُ بِالْخُنَّسِ", "خَلَقَ الْإِنْسَانَ مِنْ عَلَقٍ"],"خ")'>Mettre en évidence le خ</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les خ qu'il contient.</p>
     </section>
 
@@ -2924,7 +2925,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">نُون</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">جَبَل</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ح. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ح.</p>
       </div>
     </section>
 
@@ -3125,7 +3126,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">نُون</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">فَجْر</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ه. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ه.</p>
       </div>
     </section>
 
@@ -3143,12 +3144,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Malheur à tout calomniateur diffamateur ! »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Kawthar</div><div class="verset-mini-ref">— 108 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="haa-v3" onclick="speakArabic('إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ')">إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ</div>
-          <div class="verset-mini-translation">« En vérité, Nous t'avons accordé l'Abondance. »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Insân</div><div class="verset-mini-ref">— 76 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="haa-v3" onclick="speakArabic('هَلْ أَتَى عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ')">هَلْ أَتَى عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ</div>
+          <div class="verset-mini-translation">« N’y a-t-il pas eu pour l’homme un laps de temps ? »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["haa-v1", "haa-v2", "haa-v3"],["قُلْ هُوَ اللَّهُ أَحَدٌ", "وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ", "إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ"],"ه")'>Mettre en évidence le ه</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["haa-v1", "haa-v2", "haa-v3"],["قُلْ هُوَ اللَّهُ أَحَدٌ", "وَيْلٌ لِكُلِّ هُمَزَةٍ لُمَزَةٍ", "هَلْ أَتَى عَلَى الْإِنْسَانِ حِينٌ مِنَ الدَّهْرِ"],"ه")'>Mettre en évidence le ه</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ه qu'il contient.</p>
     </section>
 
@@ -3330,7 +3331,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">جَبَل</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">حَمْد</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent une hamza (أ إ ء). Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent une hamza (أ إ ء).</p>
       </div>
     </section>
 
@@ -3531,7 +3532,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">كَهْف</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">قَلْب</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ع. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ع.</p>
       </div>
     </section>
 
@@ -3549,12 +3550,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Par le Temps ! L'homme est certes en perdition. »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Ikhlâs</div><div class="verset-mini-ref">— 112 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="ayn-v3" onclick="speakArabic('قُلْ هُوَ اللَّهُ أَحَدٌ')">قُلْ هُوَ اللَّهُ أَحَدٌ</div>
-          <div class="verset-mini-translation">« Dis : "Lui, Allah, est Unique." »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-‘Alaq</div><div class="verset-mini-ref">— 96 : 5 —</div></div>
+          <div class="verset-mini-arabic" id="ayn-v3" onclick="speakArabic('عَلَّمَ الْإِنْسَانَ مَا لَمْ يَعْلَمْ')">عَلَّمَ الْإِنْسَانَ مَا لَمْ يَعْلَمْ</div>
+          <div class="verset-mini-translation">« Il a enseigné à l’homme ce qu’il ne savait pas. »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["ayn-v1", "ayn-v2", "ayn-v3"],["الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ", "وَالْعَصْرِ ۝ إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ", "قُلْ هُوَ اللَّهُ أَحَدٌ"],"ع")'>Mettre en évidence le ع</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["ayn-v1", "ayn-v2", "ayn-v3"],["الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ", "وَالْعَصْرِ ۝ إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ", "عَلَّمَ الْإِنْسَانَ مَا لَمْ يَعْلَمْ"],"ع")'>Mettre en évidence le ع</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ع qu'il contient.</p>
     </section>
 
@@ -3733,7 +3734,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">نَبَأ</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">كَهْف</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un غ. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un غ.</p>
       </div>
     </section>
 
@@ -3991,7 +3992,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">حَاسِد</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">مِسْكِين</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un س. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un س.</p>
       </div>
     </section>
 
@@ -4054,12 +4055,11 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
       <div class="perle-bubble-label">Perle spirituelle</div>
     </div>
-    <div class="perle-section" <div class="perle-section" id="perle-sin">
+    <div class="perle-section" id="perle-sin">
       <div class="perle-label">✶ Perle spirituelle ✶</div>
-      <div class="perle-arabic">اقْرَأُوا الْقُرْآنَ فَإِنَّهُ يَأْتِي يَوْمَ الْقِيَامَةِ شَفِيعًا لِأَصْحَابِهِ</div>
-      <div class="perle-french">« Lisez le Coran, car il viendra au Jour du Jugement comme intercesseur pour ses compagnons »</div>
-      <div class="perle-source">Muslim</div>
-    </div>
+      <div class="perle-arabic">مَثَلُ الْمُؤْمِنِ الَّذِي يَقْرَأُ الْقُرْآنَ كَمَثَلِ الْأُتْرُجَّةِ رِيحُهَا طَيِّبٌ وَطَعْمُهَا طَيِّبٌ</div>
+      <div class="perle-french">« Le croyant qui lit le Coran est comme le cédrat : son odeur est agréable et son goût est agréable »</div>
+      <div class="perle-source">Bukhârî & Muslim</div>
     </div>
 
     <div class="lesson-validate-section">
@@ -4277,7 +4277,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">شَاهِد</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">شَدِيد</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ش. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ش.</p>
       </div>
     </section>
 
@@ -4340,12 +4340,11 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
       <div class="perle-bubble-label">Perle spirituelle</div>
     </div>
-    <div class="perle-section" <div class="perle-section" id="perle-shin">
+    <div class="perle-section" id="perle-shin">
       <div class="perle-label">✶ Perle spirituelle ✶</div>
       <div class="perle-arabic">أَهْلُ الْقُرْآنِ هُمْ أَهْلُ اللَّهِ وَخَاصَّتُهُ</div>
       <div class="perle-french">« Les gens du Coran sont les gens d'Allah et Ses proches »</div>
       <div class="perle-source">Ibn Mâja (sahîh par Albânî)</div>
-    </div>
     </div>
 
     <div class="lesson-validate-section">
@@ -4577,7 +4576,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">قَفَص</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">صِرَاط</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ص. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ص.</p>
       </div>
     </section>
 
@@ -4608,12 +4607,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« N'avons-Nous pas ouvert ta poitrine ? »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-fâtiha · l'ouverture</div><div class="verset-mini-ref">— 1 : 6 —</div></div>
-          <div class="verset-mini-arabic" id="sad-v3" onclick="speakArabic('اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ')">اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ</div>
-          <div class="verset-mini-translation">« Guide-nous sur le droit chemin. »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Ma’ârij</div><div class="verset-mini-ref">— 70 : 5 —</div></div>
+          <div class="verset-mini-arabic" id="sad-v3" onclick="speakArabic('فَاصْبِرْ صَبْرًا جَمِيلًا')">فَاصْبِرْ صَبْرًا جَمِيلًا</div>
+          <div class="verset-mini-translation">« Supporte donc avec patience, d’une belle patience. »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["sad-v1", "sad-v2", "sad-v3"],["إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ", "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ", "اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ"],"ص")'>Mettre en évidence le ص</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["sad-v1", "sad-v2", "sad-v3"],["إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ", "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ", "فَاصْبِرْ صَبْرًا جَمِيلًا"],"ص")'>Mettre en évidence le ص</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ص qu'il contient.</p>
     </section>
 
@@ -4660,12 +4659,11 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
       <div class="perle-bubble-label">Perle spirituelle</div>
     </div>
-    <div class="perle-section" <div class="perle-section" id="perle-sad">
+    <div class="perle-section" id="perle-sad">
       <div class="perle-label">✶ Perle spirituelle ✶</div>
-      <div class="perle-arabic">إِنَّ الَّذِي لَيْسَ فِي جَوْفِهِ شَيْءٌ مِنَ الْقُرْآنِ كَالْبَيْتِ الْخَرِبِ</div>
-      <div class="perle-french">« Celui qui n'a rien du Coran dans le cœur est comme une maison en ruine »</div>
-      <div class="perle-source">Tirmidhî</div>
-    </div>
+      <div class="perle-arabic">وَالْقُرْآنُ حُجَّةٌ لَكَ أَوْ عَلَيْكَ</div>
+      <div class="perle-french">« Le Coran est un argument en ta faveur ou contre toi »</div>
+      <div class="perle-source">Muslim</div>
     </div>
 
     <div class="lesson-validate-section">
@@ -4898,7 +4896,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">ضَوْء</span>
           <span class="circle-word" data-correct="false" onclick="toggleCircle(this)">قَصْر</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ض. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ض.</p>
       </div>
     </section>
 
@@ -4981,12 +4979,11 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
       <div class="perle-bubble-label">Perle spirituelle</div>
     </div>
-    <div class="perle-section" <div class="perle-section" id="perle-dad">
+    <div class="perle-section" id="perle-dad">
       <div class="perle-label">✶ Perle spirituelle ✶</div>
-      <div class="perle-arabic">الَّذِي يَقْرَأُ الْقُرْآنَ وَيَتَتَعْتَعُ فِيهِ وَهُوَ عَلَيْهِ شَاقٌّ لَهُ أَجْرَانِ</div>
-      <div class="perle-french">« Celui qui lit le Coran en butant avec peine a deux récompenses »</div>
-      <div class="perle-source">Bukhârî & Muslim</div>
-    </div>
+      <div class="perle-arabic">يَجِيئُ صَاحِبُ الْقُرْآنِ يَوْمَ الْقِيَامَةِ فَيُلْبَسُ تَاجَ الْكَرَامَةِ</div>
+      <div class="perle-french">« Le compagnon du Coran revêt, au Jour de la Résurrection, la couronne d’honneur »</div>
+      <div class="perle-source">Ahmad (rapporté par Abû Hurayra)</div>
     </div>
 
     <div class="lesson-validate-section">
@@ -5220,7 +5217,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">قَدْر</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">جَدِيد</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un د. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un د.</p>
       </div>
     </section>
 
@@ -5241,14 +5238,14 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-fâtiha · l'ouverture</div><div class="verset-mini-ref">— 1 : 4 —</div></div>
-          <div class="verset-mini-arabic" id="dal-v1" onclick="speakArabic('مَالِكِ يَوْمِ الدِّينِ')">مَالِكِ يَوْمِ الدِّينِ</div>
-          <div class="verset-mini-translation">« Maître du Jour de la rétribution. »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Ash-Shams</div><div class="verset-mini-ref">— 91 : 9-10 —</div></div>
+          <div class="verset-mini-arabic" id="dal-v1" onclick="speakArabic('قَدْ أَفْلَحَ مَنْ زَكَّاهَا وَقَدْ خَابَ مَنْ دَسَّاهَا')">قَدْ أَفْلَحَ مَنْ زَكَّاهَا وَقَدْ خَابَ مَنْ دَسَّاهَا</div>
+          <div class="verset-mini-translation">« Celui qui la purifie réussit, et celui qui la corrompt échoue. »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-ikhlâs · le monothéisme pur</div><div class="verset-mini-ref">— 112 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="dal-v2" onclick="speakArabic('قُلْ هُوَ اللَّهُ أَحَدٌ')">قُلْ هُوَ اللَّهُ أَحَدٌ</div>
-          <div class="verset-mini-translation">« Dis : "Lui, Allah, est Unique." »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-A‘lâ</div><div class="verset-mini-ref">— 87 : 14-15 —</div></div>
+          <div class="verset-mini-arabic" id="dal-v2" onclick="speakArabic('قَدْ أَفْلَحَ مَنْ تَزَكَّى وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّى')">قَدْ أَفْلَحَ مَنْ تَزَكَّى وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّى</div>
+          <div class="verset-mini-translation">« Réussit, certes, celui qui se purifie, se souvient du nom de son Seigneur et prie. »</div>
         </div>
         <div class="verset-mini">
           <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-masad · les fibres</div><div class="verset-mini-ref">— 111 : 1 —</div></div>
@@ -5256,7 +5253,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Que périssent les deux mains d'Abû Lahab, et que lui-même périsse ! »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["dal-v1", "dal-v2", "dal-v3"],["مَالِكِ يَوْمِ الدِّينِ", "قُلْ هُوَ اللَّهُ أَحَدٌ", "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ"],"د")'>Mettre en évidence le د</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["dal-v1", "dal-v2", "dal-v3"],["قَدْ أَفْلَحَ مَنْ زَكَّاهَا وَقَدْ خَابَ مَنْ دَسَّاهَا", "قَدْ أَفْلَحَ مَنْ تَزَكَّى وَذَكَرَ اسْمَ رَبِّهِ فَصَلَّى", "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ"],"د")'>Mettre en évidence le د</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les د qu'il contient.</p>
     </section>
 
@@ -5547,7 +5544,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">عَذَاب</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">لَذِيذ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ذ. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ذ.</p>
       </div>
     </section>
 
@@ -5568,9 +5565,9 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-falaq · l'aube naissante</div><div class="verset-mini-ref">— 113 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="dhal-v1" onclick="speakArabic('قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ')">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</div>
-          <div class="verset-mini-translation">« Dis : "Je me réfugie auprès du Seigneur de l'aube naissante" »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Layl</div><div class="verset-mini-ref">— 92 : 1-2 —</div></div>
+          <div class="verset-mini-arabic" id="dhal-v1" onclick="speakArabic('وَاللَّيْلِ إِذَا يَغْشَى وَالنَّهَارِ إِذَا تَجَلَّى')">وَاللَّيْلِ إِذَا يَغْشَى وَالنَّهَارِ إِذَا تَجَلَّى</div>
+          <div class="verset-mini-translation">« Par la nuit quand elle enveloppe tout ! Et par le jour quand il se manifeste ! »</div>
         </div>
         <div class="verset-mini">
           <div class="verset-mini-header"><div class="verset-mini-source">Sourate az-zalzala · le tremblement</div><div class="verset-mini-ref">— 99 : 4 —</div></div>
@@ -5583,7 +5580,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« En vérité, c'est Nous qui avons fait descendre le Rappel, et c'est Nous qui en sommes les gardiens. »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["dhal-v1", "dhal-v2", "dhal-v3"],["قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ", "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا", "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ"],"ذ")'>Mettre en évidence le ذ</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["dhal-v1", "dhal-v2", "dhal-v3"],["وَاللَّيْلِ إِذَا يَغْشَى وَالنَّهَارِ إِذَا تَجَلَّى", "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا", "إِنَّا نَحْنُ نَزَّلْنَا الذِّكْرَ وَإِنَّا لَهُ لَحَافِظُونَ"],"ذ")'>Mettre en évidence le ذ</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ذ qu'il contient.</p>
     </section>
 
@@ -5874,7 +5871,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">مُسْتَقِيم</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">تَكَاثُر</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ت. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ت.</p>
       </div>
     </section>
 
@@ -5900,9 +5897,9 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Par le figuier et l'olivier ! »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-fâtiha · l'ouverture</div><div class="verset-mini-ref">— 1 : 7 —</div></div>
-          <div class="verset-mini-arabic" id="ta-v2" onclick="speakArabic('صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ')">صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ</div>
-          <div class="verset-mini-translation">« le chemin de ceux que Tu as comblés de bienfaits, »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Al-Masad</div><div class="verset-mini-ref">— 111 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="ta-v2" onclick="speakArabic('تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ')">تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ</div>
+          <div class="verset-mini-translation">« Que périssent les deux mains d’Abû Lahab, et qu’il périsse lui-même ! »</div>
         </div>
         <div class="verset-mini">
           <div class="verset-mini-header"><div class="verset-mini-source">Sourate at-takâthur · l'accumulation</div><div class="verset-mini-ref">— 102 : 1 —</div></div>
@@ -5910,7 +5907,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« La course aux richesses vous distrait, »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["ta-v1", "ta-v2", "ta-v3"],["وَالتِّينِ وَالزَّيْتُونِ", "صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ", "أَلْهَاكُمُ التَّكَاثُرُ"],"ت")'>Mettre en évidence le ت</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["ta-v1", "ta-v2", "ta-v3"],["وَالتِّينِ وَالزَّيْتُونِ", "تَبَّتْ يَدَا أَبِي لَهَبٍ وَتَبَّ", "أَلْهَاكُمُ التَّكَاثُرُ"],"ت")'>Mettre en évidence le ت</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les ت qu'il contient.</p>
     </section>
 
@@ -6212,7 +6209,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">ثَوَاب</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">ثَمَرَات</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ث. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ث.</p>
       </div>
     </section>
 
@@ -6549,7 +6546,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">مُسْتَقِيم</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">سَلام</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un م. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un م.</p>
       </div>
     </section>
 
@@ -6580,12 +6577,12 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« Malheur donc à ceux qui prient, »</div>
         </div>
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-falaq · l'aube naissante</div><div class="verset-mini-ref">— 113 : 2 —</div></div>
-          <div class="verset-mini-arabic" id="mim-v3" onclick="speakArabic('مِنْ شَرِّ مَا خَلَقَ')">مِنْ شَرِّ مَا خَلَقَ</div>
-          <div class="verset-mini-translation">« contre le mal de ce qu'Il a créé, »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate Ash-Shams</div><div class="verset-mini-ref">— 91 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="mim-v3" onclick="speakArabic('وَالشَّمْسِ وَضُحَاهَا')">وَالشَّمْسِ وَضُحَاهَا</div>
+          <div class="verset-mini-translation">« Par le soleil et sa clarté ! »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["mim-v1", "mim-v2", "mim-v3"],["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "فَوَيْلٌ لِلْمُصَلِّينَ", "مِنْ شَرِّ مَا خَلَقَ"],"م")'>Mettre en évidence le م</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["mim-v1", "mim-v2", "mim-v3"],["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ", "فَوَيْلٌ لِلْمُصَلِّينَ", "وَالشَّمْسِ وَضُحَاهَا"],"م")'>Mettre en évidence le م</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les م qu'il contient.</p>
     </section>
 
@@ -6893,7 +6890,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">تَوْفيق</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">مُؤْمِنُون</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un و. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un و.</p>
       </div>
     </section>
 
@@ -6914,9 +6911,9 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Lecture sacrée</h2><span class="section-title-lesson-ar">تِلَاوَة</span><div class="section-title-lesson-line"></div></div>
       <div class="versets-container">
         <div class="verset-mini">
-          <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-ikhlâs · le monothéisme pur</div><div class="verset-mini-ref">— 112 : 1 —</div></div>
-          <div class="verset-mini-arabic" id="waw-v1" onclick="speakArabic('قُلْ هُوَ اللَّهُ أَحَدٌ')">قُلْ هُوَ اللَّهُ أَحَدٌ</div>
-          <div class="verset-mini-translation">« Dis : "Lui, Allah, est Unique." »</div>
+          <div class="verset-mini-header"><div class="verset-mini-source">Sourate An-Najm</div><div class="verset-mini-ref">— 53 : 1 —</div></div>
+          <div class="verset-mini-arabic" id="waw-v1" onclick="speakArabic('وَالنَّجْمِ إِذَا هَوَى')">وَالنَّجْمِ إِذَا هَوَى</div>
+          <div class="verset-mini-translation">« Par l’étoile quand elle décline ! »</div>
         </div>
         <div class="verset-mini">
           <div class="verset-mini-header"><div class="verset-mini-source">Sourate al-'aṣr · le temps</div><div class="verset-mini-ref">— 103 : 3 —</div></div>
@@ -6929,7 +6926,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <div class="verset-mini-translation">« La vie dernière t'est, certes, meilleure que la première. »</div>
         </div>
       </div>
-      <button class="versets-toggle-all" onclick='highlightMultiVersets(["waw-v1", "waw-v2", "waw-v3"],["قُلْ هُوَ اللَّهُ أَحَدٌ", "وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ", "وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَىٰ"],"و")'>Mettre en évidence le و</button>
+      <button class="versets-toggle-all" onclick='highlightMultiVersets(["waw-v1", "waw-v2", "waw-v3"],["وَالنَّجْمِ إِذَا هَوَى", "وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ", "وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَىٰ"],"و")'>Mettre en évidence le و</button>
       <p class="helper-text">Cliquez sur chaque verset pour l'entendre. Cherchez les و qu'il contient.</p>
     </section>
 
@@ -7168,7 +7165,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="true" onclick="toggleCircle(this)">وَصِيٌّ</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">بَيِّنَاتٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ي. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ي.</p>
       </div>
     </section>
 
@@ -7436,7 +7433,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word" data-correct="true" onclick="toggleCircle(this)">كَلَامٌ</span>
           <span class="circle-word" data-correct="true" onclick="toggleCircle(this)">وَلَدٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ل. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ل.</p>
       </div>
     </section>
 
@@ -7706,7 +7703,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">نَصِيرٌ</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">كَرِيمٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ر. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ر.</p>
       </div>
     </section>
 
@@ -7982,7 +7979,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">زَيْتٌ</span>
           <span class="circle-word" data-correct="true" onclick="toggleCircle(this)">جَائِزٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ز. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ز.</p>
       </div>
     </section>
 
@@ -8088,9 +8085,9 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
     </div>
         <div class="perle-section" id="perle-zay">
       <div class="perle-label">✶ Perle spirituelle ✶</div>
-      <div class="perle-arabic">أَهْلُ الْقُرْآنِ هُمْ أَهْلُ اللَّهِ وَخَاصَّتُهُ</div>
-      <div class="perle-french">« Les gens du Coran sont les gens d’Allah et Ses proches »</div>
-      <div class="perle-source">Ibn Mâja (sahîh par Albânî)</div>
+      <div class="perle-arabic">أَفَلاَ يَتَدَبَّرُونَ الْقُرْآنَ أَمْ عَلَى قُلُوبٍ أَقْفَالُهَا</div>
+      <div class="perle-french">« Ne méditeront-ils donc pas le Coran ? Ou y a-t-il des cadenas sur leurs cœurs ? »</div>
+      <div class="perle-source">Coran 47:24</div>
     </div>
 
     <div class="lesson-validate-section">
@@ -8256,7 +8253,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">سُلْطَانٌ</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">مُسَيْطِرٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ط. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ط.</p>
       </div>
     </section>
 
@@ -8540,7 +8537,7 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">غَلِيظٌ</span>
           <span class="circle-word coran-word" data-correct="true" onclick="toggleCircle(this)">لَفِيظٌ</span>
         </div>
-        <p class="circle-legend">Cliquez sur les mots qui contiennent un ظ. Certains n'en contiennent pas !</p>
+        <p class="circle-legend">Cliquez sur les mots qui contiennent un ظ.</p>
       </div>
     </section>
 
