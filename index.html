@@ -940,6 +940,103 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
 .ct-reveal{ display:block; margin:6px auto 0; background:var(--or,#BFA06A); color:#fff; border:none; border-radius:20px; padding:9px 22px; cursor:pointer; font-family:inherit;}
 
 </style>
+<!-- ============================================================
+     QUIZLET PLUME & ENCRE — styles isolés (module additif)
+     Aucune classe ci-dessous ne recoupe une classe existante du site.
+     ============================================================ -->
+<style id="qz-styles">
+.qz-embed { margin-top: 6px; }
+.qz-lesson-badge {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sepia-clair);
+  background: var(--creme-fonce);
+  border: 1px solid rgba(191,160,106,0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 22px;
+}
+.qz-lesson-badge span { font-family: 'Amiri', serif; font-size: 15px; color: var(--bleu-nuit); }
+
+.qz-quiz-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; gap: 16px; }
+
+.qz-progress-wrap { flex: 1; }
+.qz-progress-label { font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.08em; color: var(--sepia-clair); margin-bottom: 6px; text-align: right; }
+.qz-progress-track { height: 8px; background: rgba(191,160,106,0.2); border-radius: 6px; overflow: hidden; }
+.qz-progress-fill { height: 100%; background: linear-gradient(90deg, var(--emeraude), var(--emeraude-clair)); border-radius: 6px; transition: width 0.4s ease; width: 0%; }
+
+.qz-card-zone { perspective: 1400px; margin-bottom: 26px; }
+.qz-card {
+  position: relative; width: 100%; min-height: 190px;
+  transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0.2,0.2,1); cursor: pointer;
+}
+.qz-card.qz-flipped { transform: rotateY(180deg); }
+.qz-card-face {
+  position: absolute; inset: 0; backface-visibility: hidden;
+  border-radius: 10px; border: 1px solid rgba(191,160,106,0.4);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 30px 24px; text-align: center;
+}
+.qz-card-front { background: linear-gradient(135deg, white 0%, #faf6ec 100%); }
+.qz-card-back { background: linear-gradient(135deg, var(--bleu-nuit) 0%, #1a2640 100%); transform: rotateY(180deg); color: var(--creme); }
+.qz-card-arabic { font-family: 'Amiri', serif; font-size: 54px; color: var(--bleu-nuit); direction: rtl; line-height: 1.3; margin-bottom: 14px; }
+.qz-card-hint { font-family: 'Playfair Display', serif; font-style: italic; font-size: 12px; color: var(--sepia-clair); }
+.qz-card-french { font-family: 'Playfair Display', serif; font-style: italic; font-size: 26px; color: var(--creme); margin-bottom: 10px; }
+.qz-card-back-hint { font-family: 'Montserrat', sans-serif; font-size: 11px; color: var(--or-clair); letter-spacing: 0.08em; text-transform: uppercase; }
+.qz-card-review-tag {
+  position: absolute; top: 10px; left: 10px;
+  font-family: 'Montserrat', sans-serif; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase;
+  background: rgba(191,160,106,0.18); color: var(--sepia-clair); padding: 4px 10px; border-radius: 20px;
+}
+
+.qz-qcm-intro { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: var(--sepia); text-align: center; margin-bottom: 16px; }
+.qz-qcm-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.qz-qcm-btn {
+  background: white; border: 1.5px solid var(--or-mat); border-radius: 8px; padding: 16px 14px;
+  font-family: 'Playfair Display', serif; font-style: italic; font-size: 15px; color: var(--bleu-nuit);
+  cursor: pointer; transition: all 0.22s ease; text-align: center;
+}
+.qz-qcm-btn:hover { background: var(--creme-fonce); border-color: var(--bleu-nuit); transform: translateY(-2px); }
+.qz-qcm-btn.qz-correct { background: var(--emeraude); border-color: var(--emeraude); color: white; cursor: default; }
+.qz-qcm-btn.qz-wrong { background: rgba(139,46,46,0.12); border-color: var(--grenat); color: var(--grenat); animation: qzShake 0.4s; }
+.qz-qcm-btn.qz-qcm-arabic { font-family: 'Amiri', serif; font-style: normal; font-size: 26px; direction: rtl; }
+.qz-qcm-btn.qz-disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
+.qz-card-french-onfront { font-family: 'Playfair Display', serif; font-style: italic; font-size: 30px; color: var(--bleu-nuit); line-height: 1.35; margin-bottom: 14px; }
+.qz-card-arabic-onback { font-family: 'Amiri', serif; font-size: 50px; color: var(--creme); direction: rtl; line-height: 1.3; margin-bottom: 10px; }
+@keyframes qzShake { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+.qz-feedback { text-align: center; margin-top: 18px; font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; min-height: 20px; }
+.qz-feedback.qz-fb-correct { color: var(--emeraude); }
+.qz-feedback.qz-fb-wrong { color: var(--grenat); }
+
+.qz-end-block { text-align: center; padding: 20px 0 6px; }
+.qz-end-icon { font-size: 40px; color: var(--or-mat); margin-bottom: 16px; }
+.qz-end-title { font-family: 'Playfair Display', serif; font-style: italic; font-size: 26px; color: var(--bleu-nuit); margin-bottom: 8px; }
+.qz-end-stats { font-family: 'Montserrat', sans-serif; font-size: 14px; color: var(--sepia-clair); margin-bottom: 26px; }
+.qz-end-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.qz-btn-primary {
+  background: var(--emeraude); color: white; border: none;
+  font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 600; letter-spacing: 0.03em;
+  padding: 14px 30px; border-radius: 30px; cursor: pointer; transition: all 0.25s ease;
+}
+.qz-btn-primary:hover { background: var(--emeraude-clair); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,110,92,0.35); }
+
+.qz-reset-row { text-align: center; margin-top: 26px; }
+.qz-reset-btn {
+  background: transparent; border: 1px solid var(--grenat); color: var(--grenat);
+  font-family: 'Montserrat', sans-serif; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 8px 18px; border-radius: 30px; cursor: pointer; transition: all 0.25s ease;
+}
+.qz-reset-btn:hover { background: var(--grenat); color: white; }
+
+@media (max-width: 768px) {
+  .qz-card-arabic { font-size: 42px; }
+  .qz-qcm-grid { grid-template-columns: 1fr; }
+}
+</style>
 </head>
 <body>
 <button id="phonToggle" class="phon-toggle" onclick="togglePhon()" title="Afficher/masquer la phonétique" aria-pressed="false">Phonétique : OFF</button>
@@ -1525,7 +1622,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-ba">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Bâ'</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 01 · <span>ب</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-ba">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-ba"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-ba">
+          <div class="qz-card" id="qz-card-ba">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-ba" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-ba"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-ba"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-ba">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-ba"></div>
+        <div class="qz-feedback" id="qz-feedback-ba"></div>
+
+        <div class="qz-end-block" id="qz-endblock-ba" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-ba"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('ba')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -1740,7 +1883,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-kaf">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Kâf</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 02 · <span>ك</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-kaf">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-kaf"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-kaf">
+          <div class="qz-card" id="qz-card-kaf">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-kaf" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-kaf"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-kaf"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-kaf">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-kaf"></div>
+        <div class="qz-feedback" id="qz-feedback-kaf"></div>
+
+        <div class="qz-end-block" id="qz-endblock-kaf" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-kaf"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('kaf')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -1959,7 +2148,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-qaf">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Qâf</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 03 · <span>ق</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-qaf">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-qaf"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-qaf">
+          <div class="qz-card" id="qz-card-qaf">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-qaf" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-qaf"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-qaf"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-qaf">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-qaf"></div>
+        <div class="qz-feedback" id="qz-feedback-qaf"></div>
+
+        <div class="qz-end-block" id="qz-endblock-qaf" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-qaf"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('qaf')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -2162,7 +2397,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-fa">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Fâ'</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 04 · <span>ف</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-fa">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-fa"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-fa">
+          <div class="qz-card" id="qz-card-fa">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-fa" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-fa"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-fa"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-fa">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-fa"></div>
+        <div class="qz-feedback" id="qz-feedback-fa"></div>
+
+        <div class="qz-end-block" id="qz-endblock-fa" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-fa"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('fa')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -2364,7 +2645,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-nun">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Nûn</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 05 · <span>ن</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-nun">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-nun"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-nun">
+          <div class="qz-card" id="qz-card-nun">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-nun" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-nun"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-nun"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-nun">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-nun"></div>
+        <div class="qz-feedback" id="qz-feedback-nun"></div>
+
+        <div class="qz-end-block" id="qz-endblock-nun" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-nun"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('nun')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -2566,7 +2893,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-jim">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Jîm</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 06 · <span>ج</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-jim">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-jim"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-jim">
+          <div class="qz-card" id="qz-card-jim">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-jim" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-jim"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-jim"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-jim">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-jim"></div>
+        <div class="qz-feedback" id="qz-feedback-jim"></div>
+
+        <div class="qz-end-block" id="qz-endblock-jim" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-jim"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('jim')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -2768,7 +3141,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-kha">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Khâ'</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 07 · <span>خ</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-kha">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-kha"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-kha">
+          <div class="qz-card" id="qz-card-kha">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-kha" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-kha"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-kha"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-kha">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-kha"></div>
+        <div class="qz-feedback" id="qz-feedback-kha"></div>
+
+        <div class="qz-end-block" id="qz-endblock-kha" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-kha"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('kha')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -2969,7 +3388,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-ha">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Ḥâ'</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 08 · <span>ح</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-ha">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-ha"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-ha">
+          <div class="qz-card" id="qz-card-ha">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-ha" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-ha"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-ha"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-ha">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-ha"></div>
+        <div class="qz-feedback" id="qz-feedback-ha"></div>
+
+        <div class="qz-end-block" id="qz-endblock-ha" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-ha"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('ha')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -3170,7 +3635,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-haa">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Hâ' douce</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 09 · <span>ه</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-haa">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-haa"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-haa">
+          <div class="qz-card" id="qz-card-haa">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-haa" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-haa"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-haa"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-haa">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-haa"></div>
+        <div class="qz-feedback" id="qz-feedback-haa"></div>
+
+        <div class="qz-end-block" id="qz-endblock-haa" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-haa"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('haa')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -3375,7 +3886,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-hamza">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Hamza</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 10 · <span>ء</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-hamza">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-hamza"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-hamza">
+          <div class="qz-card" id="qz-card-hamza">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-hamza" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-hamza"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-hamza"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-hamza">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-hamza"></div>
+        <div class="qz-feedback" id="qz-feedback-hamza"></div>
+
+        <div class="qz-end-block" id="qz-endblock-hamza" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-hamza"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('hamza')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -3576,7 +4133,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-ayn">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire 'Ayn</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 11 · <span>ع</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-ayn">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-ayn"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-ayn">
+          <div class="qz-card" id="qz-card-ayn">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-ayn" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-ayn"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-ayn"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-ayn">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-ayn"></div>
+        <div class="qz-feedback" id="qz-feedback-ayn"></div>
+
+        <div class="qz-end-block" id="qz-endblock-ayn" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-ayn"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('ayn')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -3778,7 +4381,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="lesson-validate-section">
+        <section class="section" id="quizlet-voc-ghayn">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Ghayn</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 12 · <span>غ</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-ghayn">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-ghayn"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-ghayn">
+          <div class="qz-card" id="qz-card-ghayn">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-ghayn" style="display:none;">Révision</div>
+              <div class="qz-card-arabic" id="qz-cardarabic-ghayn"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir la traduction</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-french" id="qz-cardfrench-ghayn"></div>
+              <div class="qz-card-back-hint">Traduction</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-ghayn">Quelle est la traduction ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-ghayn"></div>
+        <div class="qz-feedback" id="qz-feedback-ghayn"></div>
+
+        <div class="qz-end-block" id="qz-endblock-ghayn" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-ghayn"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('ghayn')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="lesson-validate-section">
       <div class="lesson-validate-title">Leçon terminée ?</div>
       <div class="lesson-validate-text">Télécharge ta fiche PDF, fais les exercices écrits, enregistre ta récitation, puis valide la leçon.</div>
       <div>
@@ -4049,7 +4698,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="perle-bubble-wrap">
+        <section class="section" id="quizlet-voc-sin">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Sîn</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 13 · <span>س</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-sin">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-sin"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-sin">
+          <div class="qz-card" id="qz-card-sin">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-sin" style="display:none;">Révision</div>
+              <div class="qz-card-french-onfront" id="qz-cardarabic-sin"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir le mot en arabe</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-arabic-onback" id="qz-cardfrench-sin"></div>
+              <div class="qz-card-back-hint">Mot en arabe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-sin">Quel est le mot en arabe ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-sin"></div>
+        <div class="qz-feedback" id="qz-feedback-sin"></div>
+
+        <div class="qz-end-block" id="qz-endblock-sin" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-sin"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('sin')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="perle-bubble-wrap">
       <div class="perle-bubble" onclick="togglePerle('sin')" title="Cliquer pour découvrir">
         <span class="perle-bubble-icon">✵</span>
       </div>
@@ -4334,7 +5029,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="perle-bubble-wrap">
+        <section class="section" id="quizlet-voc-shin">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Shîn</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 14 · <span>ش</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-shin">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-shin"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-shin">
+          <div class="qz-card" id="qz-card-shin">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-shin" style="display:none;">Révision</div>
+              <div class="qz-card-french-onfront" id="qz-cardarabic-shin"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir le mot en arabe</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-arabic-onback" id="qz-cardfrench-shin"></div>
+              <div class="qz-card-back-hint">Mot en arabe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-shin">Quel est le mot en arabe ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-shin"></div>
+        <div class="qz-feedback" id="qz-feedback-shin"></div>
+
+        <div class="qz-end-block" id="qz-endblock-shin" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-shin"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('shin')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="perle-bubble-wrap">
       <div class="perle-bubble" onclick="togglePerle('shin')" title="Cliquer pour découvrir">
         <span class="perle-bubble-icon">✵</span>
       </div>
@@ -4653,7 +5394,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="perle-bubble-wrap">
+        <section class="section" id="quizlet-voc-sad">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Ṣâd</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 15 · <span>ص</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-sad">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-sad"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-sad">
+          <div class="qz-card" id="qz-card-sad">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-sad" style="display:none;">Révision</div>
+              <div class="qz-card-french-onfront" id="qz-cardarabic-sad"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir le mot en arabe</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-arabic-onback" id="qz-cardfrench-sad"></div>
+              <div class="qz-card-back-hint">Mot en arabe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-sad">Quel est le mot en arabe ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-sad"></div>
+        <div class="qz-feedback" id="qz-feedback-sad"></div>
+
+        <div class="qz-end-block" id="qz-endblock-sad" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-sad"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('sad')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="perle-bubble-wrap">
       <div class="perle-bubble" onclick="togglePerle('sad')" title="Cliquer pour découvrir">
         <span class="perle-bubble-icon">✵</span>
       </div>
@@ -4973,7 +5760,53 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
       </div>
     </section>
 
-    <div class="perle-bubble-wrap">
+        <section class="section" id="quizlet-voc-dad">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Ḍâd</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 16 · <span>ض</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-dad">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-dad"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-dad">
+          <div class="qz-card" id="qz-card-dad">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-dad" style="display:none;">Révision</div>
+              <div class="qz-card-french-onfront" id="qz-cardarabic-dad"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir le mot en arabe</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-arabic-onback" id="qz-cardfrench-dad"></div>
+              <div class="qz-card-back-hint">Mot en arabe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-dad">Quel est le mot en arabe ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-dad"></div>
+        <div class="qz-feedback" id="qz-feedback-dad"></div>
+
+        <div class="qz-end-block" id="qz-endblock-dad" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-dad"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('dad')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
+        </div>
+      </div>
+    </section>
+
+<div class="perle-bubble-wrap">
       <div class="perle-bubble" onclick="togglePerle('dad')" title="Cliquer pour découvrir">
         <span class="perle-bubble-icon">✵</span>
       </div>
@@ -5294,6 +6127,52 @@ body:not(.phon-on) .info-row{grid-template-columns:repeat(2,1fr);}
           <button class="record-btn" id="dal-recordBtn" onclick="toggleRecord('dal')">🎤</button>
           <div id="dal-recordStatus" style="margin-top:15px;font-family:'Playfair Display';font-style:italic;color:var(--sepia-clair);font-size:14px;"></div>
           <p class="record-helper">Envoie ton audio à ton professeur via WhatsApp pour correction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quizlet-voc-dal">
+      <div class="section-title-lesson"><h2 class="section-title-lesson-fr">Quizlet Vocabulaire Dâl</h2><span class="section-title-lesson-ar">بِطَاقَاتُ المُفْرَدَات</span><div class="section-title-lesson-line"></div></div>
+
+      <div class="qz-embed">
+        <div class="qz-lesson-badge">Leçon 17 · <span>د</span></div>
+
+        <div class="qz-quiz-top">
+          <div class="qz-progress-wrap">
+            <div class="qz-progress-label" id="qz-progresslabel-dal">0 / 0 mots</div>
+            <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progressfill-dal"></div></div>
+          </div>
+        </div>
+
+        <div class="qz-card-zone" id="qz-cardzone-dal">
+          <div class="qz-card" id="qz-card-dal">
+            <div class="qz-card-face qz-card-front">
+              <div class="qz-card-review-tag" id="qz-reviewtag-dal" style="display:none;">Révision</div>
+              <div class="qz-card-french-onfront" id="qz-cardarabic-dal"></div>
+              <div class="qz-card-hint">Clique sur la carte pour voir le mot en arabe</div>
+            </div>
+            <div class="qz-card-face qz-card-back">
+              <div class="qz-card-arabic-onback" id="qz-cardfrench-dal"></div>
+              <div class="qz-card-back-hint">Mot en arabe</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="qz-qcm-intro" id="qz-qcmintro-dal">Quel est le mot en arabe ?</div>
+        <div class="qz-qcm-grid" id="qz-qcmgrid-dal"></div>
+        <div class="qz-feedback" id="qz-feedback-dal"></div>
+
+        <div class="qz-end-block" id="qz-endblock-dal" style="display:none;">
+          <div class="qz-end-icon">✦</div>
+          <div class="qz-end-title">Leçon terminée</div>
+          <div class="qz-end-stats" id="qz-endstats-dal"></div>
+          <div class="qz-end-actions">
+            <button class="qz-btn-primary" onclick="qzRestart('dal')">Recommencer cette leçon</button>
+          </div>
+        </div>
+
+        <div class="qz-reset-row">
+          <button class="qz-reset-btn" onclick="qzResetAll()">Repartir à zéro (tout le vocabulaire)</button>
         </div>
       </div>
     </section>
@@ -9199,6 +10078,610 @@ function ctReveal(btn){
     btn.dataset.revealed='0';
   }
 }
+</script>
+<!-- ============================================================
+     QUIZLET PLUME & ENCRE — moteur JS (module isolé, additif)
+     Namespace "qz" dédié : aucune collision avec le reste du site.
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  var QZ_LESSONS_DATA = {
+    ba: {
+      num: 1, letter: 'ب',
+      words: [
+        { ar: 'بَابٌ', fr: 'la porte' },
+        { ar: 'بَيْتٌ', fr: 'la maison' },
+        { ar: 'قَلْبٌ', fr: 'le cœur' },
+        { ar: 'بِنْتٌ', fr: 'la fille' },
+        { ar: 'بُرْكَانٌ', fr: 'le volcan' },
+        { ar: 'كَبْشٌ', fr: 'le bélier' },
+        { ar: 'طَبِيبٌ', fr: 'le médecin' },
+        { ar: 'حَبْلٌ', fr: 'la corde' },
+        { ar: 'بَرَكَةٌ', fr: 'la bénédiction' },
+        { ar: 'طَبَّاخٌ', fr: 'le cuisinier' },
+        { ar: 'بُرْتُقَالَةٌ', fr: "l'orange" },
+        { ar: 'مِحْرَابٌ', fr: 'le mihrab' },
+        { ar: 'بَيَانٌ', fr: 'la déclaration' }
+      ]
+    },
+    kaf: {
+      num: 2, letter: 'ك',
+      words: [
+        { ar: 'كَلْبٌ', fr: 'le chien' },
+        { ar: 'مَكْتَبٌ', fr: 'le bureau' },
+        { ar: 'مَلَكٌ', fr: "l'ange" },
+        { ar: 'كِتَابٌ', fr: 'le livre' },
+        { ar: 'كُرْسِيٌّ', fr: 'la chaise' },
+        { ar: 'كَهْفٌ', fr: 'la grotte' },
+        { ar: 'كَرِيمٌ', fr: 'généreux' },
+        { ar: 'شَوْكَةٌ', fr: "l'épine" },
+        { ar: 'كَرَّاسَةٌ', fr: 'le cahier' },
+        { ar: 'مَالِكٌ', fr: 'le maître' },
+        { ar: 'شُبَّاكٌ', fr: 'la fenêtre' },
+        { ar: 'أَكْرَمُ', fr: 'plus généreux' },
+        { ar: 'بَكَى', fr: 'il a pleuré' }
+      ]
+    },
+    qaf: {
+      num: 3, letter: 'ق',
+      words: [
+        { ar: 'قُرْآنٌ', fr: 'le Coran' },
+        { ar: 'قَلْبٌ', fr: 'le cœur' },
+        { ar: 'قَلَمٌ', fr: 'le stylo' },
+        { ar: 'طَرِيقٌ', fr: 'le chemin' },
+        { ar: 'أَخْلَاقٌ', fr: "l'éthique" },
+        { ar: 'قِطٌّ', fr: 'le chat' },
+        { ar: 'بَقَرَةٌ', fr: 'la vache' },
+        { ar: 'قَرَأَ', fr: 'il a lu' },
+        { ar: 'فَرْقٌ', fr: 'la différence' },
+        { ar: 'قِسْمٌ', fr: 'la partie' }
+      ]
+    },
+    fa: {
+      num: 4, letter: 'ف',
+      words: [
+        { ar: 'فَلَقٌ', fr: "l'aube" },
+        { ar: 'فِيلٌ', fr: "l'éléphant" },
+        { ar: 'كُفُوٌ', fr: 'égal' },
+        { ar: 'نَفْسٌ', fr: "l'âme" },
+        { ar: 'أَلْفٌ', fr: 'mille' },
+        { ar: 'خَوْفٌ', fr: 'la peur' },
+        { ar: 'فَوْقٌ', fr: 'au-dessus' },
+        { ar: 'فُلْكٌ', fr: "l'arche" },
+        { ar: 'بَيْتٌ', fr: 'la maison' },
+        { ar: 'كِتَابٌ', fr: 'le livre' },
+        { ar: 'طَرِيقٌ', fr: 'le chemin' }
+      ]
+    },
+    nun: {
+      num: 5, letter: 'ن',
+      words: [
+        { ar: 'نَاقَةٌ', fr: 'la chamelle' },
+        { ar: 'كُنْ', fr: 'Sois !' },
+        { ar: 'بَنُونٌ', fr: 'des fils' },
+        { ar: 'بَنَانٌ', fr: 'les doigts' },
+        { ar: 'نَفَقٌ', fr: 'le tunnel' },
+        { ar: 'بَابٌ', fr: 'la porte' },
+        { ar: 'مَكْتَبٌ', fr: 'le bureau' },
+        { ar: 'قَلَمٌ', fr: 'le stylo' },
+        { ar: 'كَرِيمٌ', fr: 'généreux' },
+        { ar: 'فِيلٌ', fr: "l'éléphant" },
+        { ar: 'خَوْفٌ', fr: 'la peur' },
+        { ar: 'أَلْفٌ', fr: 'mille' }
+      ]
+    },
+    jim: {
+      num: 6, letter: 'ج',
+      words: [
+        { ar: 'جَنَّةٌ', fr: 'le jardin' },
+        { ar: 'فَجْرٌ', fr: "l'aube" },
+        { ar: 'بُرُوجٌ', fr: 'des constellations' },
+        { ar: 'نَجْمٌ', fr: "l'étoile" },
+        { ar: 'جَبَلٌ', fr: 'la montagne' },
+        { ar: 'زَوْجٌ', fr: "l'époux" },
+        { ar: 'حَجٌّ', fr: 'le pèlerinage' },
+        { ar: 'جُودٌ', fr: 'la générosité' },
+        { ar: 'بِنْتٌ', fr: 'la fille' },
+        { ar: 'مَلَكٌ', fr: "l'ange" },
+        { ar: 'قِطٌّ', fr: 'le chat' },
+        { ar: 'كُنْ', fr: 'Sois !' }
+      ]
+    },
+    kha: {
+      num: 7, letter: 'خ',
+      words: [
+        { ar: 'خَلَقَ', fr: 'Il a créé' },
+        { ar: 'نَخْلٌ', fr: 'les palmiers' },
+        { ar: 'بَرْزَخٌ', fr: 'la barrière' },
+        { ar: 'خَوْفٌ', fr: 'la peur' },
+        { ar: 'دُخَانٌ', fr: 'la fumée' },
+        { ar: 'أُخْرَى', fr: "l'autre" },
+        { ar: 'خُبْزٌ', fr: 'le pain' },
+        { ar: 'حَبْلٌ', fr: 'la corde' },
+        { ar: 'كُرْسِيٌّ', fr: 'la chaise' },
+        { ar: 'أَخْلَاقٌ', fr: "l'éthique" },
+        { ar: 'نَفْسٌ', fr: "l'âme" },
+        { ar: 'نَاقَةٌ', fr: 'la chamelle' },
+        { ar: 'جَبَلٌ', fr: 'la montagne' }
+      ]
+    },
+    ha: {
+      num: 8, letter: 'ح',
+      words: [
+        { ar: 'حَمْدٌ', fr: 'la louange' },
+        { ar: 'رَحْمَةٌ', fr: 'la miséricorde' },
+        { ar: 'فَتْحٌ', fr: 'la victoire' },
+        { ar: 'صُبْحٌ', fr: "l'aube" },
+        { ar: 'رُوحٌ', fr: "l'esprit" },
+        { ar: 'سَبِّحْ', fr: 'glorifie' },
+        { ar: 'بُرْتُقَالَةٌ', fr: "l'orange" },
+        { ar: 'شَوْكَةٌ', fr: "l'épine" },
+        { ar: 'مَالِكٌ', fr: 'le maître' },
+        { ar: 'قُرْآنٌ', fr: 'le Coran' },
+        { ar: 'فُلْكٌ', fr: "l'arche" },
+        { ar: 'بَنَانٌ', fr: 'les doigts' }
+      ]
+    },
+    haa: {
+      num: 9, letter: 'ه',
+      words: [
+        { ar: 'هُوَ', fr: 'Lui' },
+        { ar: 'لَهَبٌ', fr: 'la flamme' },
+        { ar: 'وَجْهٌ', fr: 'le visage' },
+        { ar: 'فَاكِهَةٌ', fr: 'le fruit' },
+        { ar: 'شَهْرٌ', fr: 'le mois' },
+        { ar: 'نَهْرٌ', fr: 'la rivière' },
+        { ar: 'مِحْرَابٌ', fr: 'le mihrab' },
+        { ar: 'أَكْرَمُ', fr: 'plus généreux' },
+        { ar: 'بَقَرَةٌ', fr: 'la vache' },
+        { ar: 'فَرْقٌ', fr: 'la différence' },
+        { ar: 'قِسْمٌ', fr: 'la partie' },
+        { ar: 'بَنُونٌ', fr: 'des fils' },
+        { ar: 'نَفَقٌ', fr: 'le tunnel' }
+      ]
+    },
+    hamza: {
+      num: 10, letter: 'ء',
+      words: [
+        { ar: 'أَحَدٌ', fr: "l'Unique" },
+        { ar: 'أَبٌ', fr: 'le père' },
+        { ar: 'نَبَأٌ', fr: 'la nouvelle' },
+        { ar: 'مُؤْمِنٌ', fr: 'le croyant' },
+        { ar: 'إِذَا', fr: 'lorsque' },
+        { ar: 'سَأَلَ', fr: 'il a demandé' },
+        { ar: 'أَخٌ', fr: 'le frère' },
+        { ar: 'بَيَانٌ', fr: 'la déclaration' },
+        { ar: 'شُبَّاكٌ', fr: 'la fenêtre' },
+        { ar: 'كَهْفٌ', fr: 'la grotte' },
+        { ar: 'فَوْقٌ', fr: 'au-dessus' },
+        { ar: 'جَنَّةٌ', fr: 'le jardin' },
+        { ar: 'نَجْمٌ', fr: "l'étoile" }
+      ]
+    },
+    ayn: {
+      num: 11, letter: 'ع',
+      words: [
+        { ar: 'عَبْدٌ', fr: 'le serviteur' },
+        { ar: 'جُوعٌ', fr: 'la faim' },
+        { ar: 'نِعْمَةٌ', fr: 'le bienfait' },
+        { ar: 'عَقَبَةٌ', fr: 'la montée' },
+        { ar: 'مَعَ', fr: 'avec' },
+        { ar: 'عَيْنٌ', fr: "l'œil" },
+        { ar: 'سَمِعَ', fr: 'il a entendu' },
+        { ar: 'بَرَكَةٌ', fr: 'la bénédiction' },
+        { ar: 'بَكَى', fr: 'il a pleuré' },
+        { ar: 'كُفُوٌ', fr: 'égal' },
+        { ar: 'بُرُوجٌ', fr: 'des constellations' },
+        { ar: 'زَوْجٌ', fr: "l'époux" },
+        { ar: 'جُودٌ', fr: 'la générosité' },
+        { ar: 'خُبْزٌ', fr: 'le pain' }
+      ]
+    },
+    ghayn: {
+      num: 12, letter: 'غ',
+      words: [
+        { ar: 'غَاسِقٌ', fr: "l'obscurité" },
+        { ar: 'غَيْبٌ', fr: "l'invisible" },
+        { ar: 'أَغْنَى', fr: 'Il a enrichi' },
+        { ar: 'بَلَغَ', fr: 'il a atteint' },
+        { ar: 'مَغْفِرَةٌ', fr: 'le pardon' },
+        { ar: 'غَاشِيَةٌ', fr: "l'Enveloppante" },
+        { ar: 'طَبَّاخٌ', fr: 'le cuisinier' },
+        { ar: 'دُخَانٌ', fr: 'la fumée' },
+        { ar: 'نَخْلٌ', fr: 'les palmiers' },
+        { ar: 'كِتَابٌ', fr: 'le livre' },
+        { ar: 'طَرِيقٌ', fr: 'le chemin' },
+        { ar: 'كَرِيمٌ', fr: 'généreux' },
+        { ar: 'أُخْرَى', fr: "l'autre" },
+        { ar: 'خَلَقَ', fr: 'Il a créé' }
+      ]
+    },
+    sin: {
+      num: 13, letter: 'س', inverted: true,
+      words: [
+        { ar: 'سَلَامٌ', fr: 'la paix' },
+        { ar: 'نَفْسٌ', fr: "l'âme" },
+        { ar: 'مِسْكِينٌ', fr: 'le pauvre' },
+        { ar: 'إِنْسَانٌ', fr: "l'homme" },
+        { ar: 'وَسْوَاسٌ', fr: 'le murmure' },
+        { ar: 'يُسْرٌ', fr: 'la facilité' },
+        { ar: 'سِجِّيلٌ', fr: "pierres d'argile" },
+        { ar: 'حَاسِدٌ', fr: "l'envieux" },
+        { ar: 'عَسْعَسَ', fr: "la nuit s'épaissit" },
+        { ar: 'بَيْتٌ', fr: 'la maison' },
+        { ar: 'قَلْبٌ', fr: 'le cœur' },
+        { ar: 'كِتَابٌ', fr: 'le livre' },
+        { ar: 'كَرِيمٌ', fr: 'généreux' },
+        { ar: 'قُرْآنٌ', fr: 'le Coran' },
+        { ar: 'طَرِيقٌ', fr: 'le chemin' },
+        { ar: 'فِيلٌ', fr: "l'éléphant" },
+        { ar: 'جَنَّةٌ', fr: 'le jardin' },
+        { ar: 'حَمْدٌ', fr: 'la louange' },
+        { ar: 'هُوَ', fr: 'Lui' },
+        { ar: 'عَبْدٌ', fr: 'le serviteur' }
+      ]
+    },
+    shin: {
+      num: 14, letter: 'ش', inverted: true,
+      words: [
+        { ar: 'شَمْسٌ', fr: 'le soleil' },
+        { ar: 'قُرَيْشٌ', fr: 'la tribu de Quraysh' },
+        { ar: 'شِتَاءٌ', fr: "l'hiver" },
+        { ar: 'شَرٌّ', fr: 'le mal' },
+        { ar: 'يَخْشَى', fr: 'il craint' },
+        { ar: 'عَشْرٌ', fr: 'dix' },
+        { ar: 'شَفْعٌ', fr: 'le pair' },
+        { ar: 'شَاهِدٌ', fr: 'le témoin' },
+        { ar: 'شَدِيدٌ', fr: 'intense' },
+        { ar: 'بَابٌ', fr: 'la porte' },
+        { ar: 'مَكْتَبٌ', fr: 'le bureau' },
+        { ar: 'مَلَكٌ', fr: "l'ange" },
+        { ar: 'قَلَمٌ', fr: 'le stylo' },
+        { ar: 'أَخْلَاقٌ', fr: "l'éthique" },
+        { ar: 'نَاقَةٌ', fr: 'la chamelle' },
+        { ar: 'فَجْرٌ', fr: "l'aube" },
+        { ar: 'نَجْمٌ', fr: "l'étoile" },
+        { ar: 'رَحْمَةٌ', fr: 'la miséricorde' },
+        { ar: 'فَتْحٌ', fr: 'la victoire' },
+        { ar: 'نَبَأٌ', fr: 'la nouvelle' }
+      ]
+    },
+    sad: {
+      num: 15, letter: 'ص', inverted: true,
+      words: [
+        { ar: 'صَلَاةٌ', fr: 'la prière' },
+        { ar: 'صَدْرٌ', fr: 'la poitrine' },
+        { ar: 'نَصْرٌ', fr: 'le secours' },
+        { ar: 'صِرَاطٌ', fr: 'le chemin' },
+        { ar: 'عَصْرٌ', fr: 'le temps' },
+        { ar: 'بَصَرٌ', fr: 'la vue' },
+        { ar: 'صَابُونٌ', fr: 'le savon' },
+        { ar: 'صَنْدُوقٌ', fr: 'la boîte' },
+        { ar: 'قَفَصٌ', fr: 'la cage' },
+        { ar: 'صَحْنٌ', fr: "l'assiette" },
+        { ar: 'مِقَصٌّ', fr: 'les ciseaux' },
+        { ar: 'رَصِيفٌ', fr: 'le trottoir' },
+        { ar: 'قَصَصٌ', fr: 'le récit' },
+        { ar: 'بِنْتٌ', fr: 'la fille' },
+        { ar: 'كُرْسِيٌّ', fr: 'la chaise' },
+        { ar: 'قِطٌّ', fr: 'le chat' },
+        { ar: 'بَقَرَةٌ', fr: 'la vache' },
+        { ar: 'خَوْفٌ', fr: 'la peur' },
+        { ar: 'جَبَلٌ', fr: 'la montagne' },
+        { ar: 'مُؤْمِنٌ', fr: 'le croyant' }
+      ]
+    },
+    dad: {
+      num: 16, letter: 'ض', inverted: true,
+      words: [
+        { ar: 'ضُحًى', fr: 'la clarté du matin' },
+        { ar: 'أَرْضٌ', fr: 'la terre' },
+        { ar: 'غَضَبٌ', fr: 'la colère' },
+        { ar: 'ضَبْحٌ', fr: 'le halètement' },
+        { ar: 'ضَلَالٌ', fr: "l'égarement" },
+        { ar: 'ضَرِيعٌ', fr: 'plante amère' },
+        { ar: 'ضَوْءٌ', fr: 'la lumière' },
+        { ar: 'بَيْضٌ', fr: 'les œufs' },
+        { ar: 'أَخْضَرُ', fr: 'vert' },
+        { ar: 'ضَيْفٌ', fr: "l'invité" },
+        { ar: 'ضِرْسٌ', fr: 'la molaire' },
+        { ar: 'رِيَاضَةٌ', fr: 'le sport' },
+        { ar: 'بُرْكَانٌ', fr: 'le volcan' },
+        { ar: 'شَوْكَةٌ', fr: "l'épine" },
+        { ar: 'فَرْقٌ', fr: 'la différence' },
+        { ar: 'أَلْفٌ', fr: 'mille' },
+        { ar: 'بَنَانٌ', fr: 'les doigts' },
+        { ar: 'زَوْجٌ', fr: "l'époux" },
+        { ar: 'خُبْزٌ', fr: 'le pain' },
+        { ar: 'صُبْحٌ', fr: "l'aube" }
+      ]
+    },
+    dal: {
+      num: 17, letter: 'د', inverted: true,
+      words: [
+        { ar: 'دِينٌ', fr: 'la religion' },
+        { ar: 'حَمْدٌ', fr: 'la louange' },
+        { ar: 'عَبْدٌ', fr: 'le serviteur' },
+        { ar: 'وَلَدٌ', fr: "l'enfant" },
+        { ar: 'دَارٌ', fr: 'la maison' },
+        { ar: 'يَدٌ', fr: 'la main' },
+        { ar: 'أَحَدٌ', fr: "l'Unique" },
+        { ar: 'بَلَدٌ', fr: 'la cité' },
+        { ar: 'جَدِيدٌ', fr: 'nouveau' },
+        { ar: 'عَدَدٌ', fr: 'le nombre' },
+        { ar: 'مَسْجِدٌ', fr: 'la mosquée' },
+        { ar: 'طَبِيبٌ', fr: 'le médecin' },
+        { ar: 'شُبَّاكٌ', fr: 'la fenêtre' },
+        { ar: 'قِسْمٌ', fr: 'la partie' },
+        { ar: 'كُفُوٌ', fr: 'égal' },
+        { ar: 'كُنْ', fr: 'Sois !' },
+        { ar: 'بُرُوجٌ', fr: 'des constellations' },
+        { ar: 'نَخْلٌ', fr: 'les palmiers' },
+        { ar: 'فَاكِهَةٌ', fr: 'le fruit' },
+        { ar: 'سَأَلَ', fr: 'il a demandé' }
+      ]
+    }
+  };
+
+  var QZ_LESSON_ORDER = ['ba', 'kaf', 'qaf', 'fa', 'nun', 'jim', 'kha', 'ha', 'haa', 'hamza', 'ayn', 'ghayn', 'sin', 'shin', 'sad', 'dad', 'dal'];
+  var QZ_STORAGE_KEY = 'plumeEncreQuizlet_v1';
+  var QZ_REVIEW_RATIO = 0.20;
+  var QZ_RETENTION_DELAY_MIN = 2;
+
+  function qzLoadState() {
+    try {
+      var raw = window.localStorage.getItem(QZ_STORAGE_KEY);
+      if (!raw) return { wordStats: {} };
+      var parsed = JSON.parse(raw);
+      if (!parsed.wordStats) parsed.wordStats = {};
+      return parsed;
+    } catch (e) { return { wordStats: {} }; }
+  }
+  function qzSaveState() {
+    try { window.localStorage.setItem(QZ_STORAGE_KEY, JSON.stringify(qzState)); } catch (e) {}
+  }
+  var qzState = qzLoadState();
+
+  function qzGetWordStat(ar) {
+    if (!qzState.wordStats[ar]) qzState.wordStats[ar] = { seen: 0, correct: 0, mastered: false };
+    return qzState.wordStats[ar];
+  }
+  function qzMarkWordResult(ar, isCorrect) {
+    var s = qzGetWordStat(ar);
+    s.seen += 1;
+    if (isCorrect) { s.correct += 1; s.mastered = true; }
+    qzSaveState();
+  }
+
+  function qzShuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = a[i]; a[i] = a[j]; a[j] = tmp;
+    }
+    return a;
+  }
+
+  function qzAllWordsPool(excludeLessonKey) {
+    var pool = [];
+    QZ_LESSON_ORDER.forEach(function (k) {
+      if (k === excludeLessonKey) return;
+      pool = pool.concat(QZ_LESSONS_DATA[k].words);
+    });
+    return pool;
+  }
+
+  function qzPickDistractors(correctWord, lessonKey, field) {
+    field = field || 'fr';
+    var lessonWords = QZ_LESSONS_DATA[lessonKey].words.filter(function (w) { return w.ar !== correctWord.ar; });
+    var candidates = qzShuffle(lessonWords);
+    var chosen = [];
+    var seenVal = {};
+    seenVal[correctWord[field]] = true;
+    candidates.forEach(function (w) {
+      if (chosen.length >= 3) return;
+      if (seenVal[w[field]]) return;
+      seenVal[w[field]] = true;
+      chosen.push(w[field]);
+    });
+    if (chosen.length < 3) {
+      var extra = qzShuffle(qzAllWordsPool(null).filter(function (w) { return w.ar !== correctWord.ar; }));
+      for (var i = 0; i < extra.length && chosen.length < 3; i++) {
+        if (!seenVal[extra[i][field]]) { seenVal[extra[i][field]] = true; chosen.push(extra[i][field]); }
+      }
+    }
+    return chosen;
+  }
+
+  function qzBuildQueue(lessonKey) {
+    var lesson = QZ_LESSONS_DATA[lessonKey];
+    var ownArSet = {};
+    lesson.words.forEach(function (w) { ownArSet[w.ar] = true; });
+    var queue = qzShuffle(lesson.words).map(function (w) { return { ar: w.ar, fr: w.fr, lessonKey: lessonKey, isReview: false }; });
+    var previousKeys = QZ_LESSON_ORDER.filter(function (k) { return QZ_LESSONS_DATA[k].num < lesson.num; });
+    if (previousKeys.length > 0) {
+      var reviewPool = [];
+      var seenReviewAr = {};
+      previousKeys.forEach(function (k) {
+        QZ_LESSONS_DATA[k].words.forEach(function (w) {
+          if (ownArSet[w.ar]) return;
+          if (seenReviewAr[w.ar]) return;
+          var stat = qzState.wordStats[w.ar];
+          if (stat && stat.mastered) {
+            seenReviewAr[w.ar] = true;
+            reviewPool.push({ ar: w.ar, fr: w.fr, lessonKey: k, isReview: true });
+          }
+        });
+      });
+      if (reviewPool.length > 0) {
+        var reviewCount = Math.max(1, Math.round(reviewPool.length * QZ_REVIEW_RATIO));
+        var picked = qzShuffle(reviewPool).slice(0, reviewCount);
+        picked.forEach(function (w) {
+          var pos = Math.floor(Math.random() * (queue.length + 1));
+          queue.splice(pos, 0, w);
+        });
+      }
+    }
+    return queue;
+  }
+
+  var qzSessions = {};
+
+  function qzUpdateProgress(lessonKey) {
+    var s = qzSessions[lessonKey];
+    var pct = s.totalCount === 0 ? 0 : Math.round((s.validatedCount / s.totalCount) * 100);
+    var lbl = document.getElementById('qz-progresslabel-' + lessonKey);
+    var fill = document.getElementById('qz-progressfill-' + lessonKey);
+    if (lbl) lbl.textContent = s.validatedCount + ' / ' + s.totalCount + ' mots';
+    if (fill) fill.style.width = pct + '%';
+  }
+
+  function qzShowQuizUI(lessonKey, visible) {
+    var display = visible ? '' : 'none';
+    var zone = document.getElementById('qz-cardzone-' + lessonKey);
+    var intro = document.getElementById('qz-qcmintro-' + lessonKey);
+    var grid = document.getElementById('qz-qcmgrid-' + lessonKey);
+    var endBlock = document.getElementById('qz-endblock-' + lessonKey);
+    if (zone) zone.style.display = display;
+    if (intro) intro.style.display = display;
+    if (grid) grid.style.display = display;
+    if (endBlock) endBlock.style.display = visible ? 'none' : endBlock.style.display;
+  }
+
+  function qzNextCard(lessonKey) {
+    var s = qzSessions[lessonKey];
+    var fb = document.getElementById('qz-feedback-' + lessonKey);
+    if (fb) { fb.textContent = ''; fb.className = 'qz-feedback'; }
+    var card = document.getElementById('qz-card-' + lessonKey);
+    if (card) card.classList.remove('qz-flipped');
+    s.answering = false;
+    qzUpdateProgress(lessonKey);
+
+    if (s.queue.length === 0) {
+      qzEndSession(lessonKey);
+      return;
+    }
+
+    var word = s.queue.shift();
+    s.current = word;
+
+    var lesson = QZ_LESSONS_DATA[lessonKey];
+    var inverted = !!lesson.inverted;
+    var field = inverted ? 'ar' : 'fr';
+
+    var elAr = document.getElementById('qz-cardarabic-' + lessonKey);
+    var elFr = document.getElementById('qz-cardfrench-' + lessonKey);
+    var elTag = document.getElementById('qz-reviewtag-' + lessonKey);
+    if (elAr) elAr.textContent = inverted ? word.fr : word.ar;
+    if (elFr) elFr.textContent = inverted ? word.ar : word.fr;
+    if (elTag) elTag.style.display = word.isReview ? 'block' : 'none';
+
+    var distractors = qzPickDistractors(word, word.lessonKey, field);
+    var choices = qzShuffle(distractors.concat([word[field]]));
+
+    var grid = document.getElementById('qz-qcmgrid-' + lessonKey);
+    if (grid) {
+      grid.innerHTML = '';
+      choices.forEach(function (choiceText) {
+        var btn = document.createElement('button');
+        btn.className = 'qz-qcm-btn' + (inverted ? ' qz-qcm-arabic' : '');
+        btn.textContent = choiceText;
+        btn.addEventListener('click', function () { qzHandleAnswer(lessonKey, btn, choiceText, field); });
+        grid.appendChild(btn);
+      });
+    }
+  }
+
+  function qzHandleAnswer(lessonKey, clickedBtn, choiceText, field) {
+    field = field || 'fr';
+    var s = qzSessions[lessonKey];
+    if (s.answering) return;
+    s.answering = true;
+
+    var word = s.current;
+    var correctValue = word[field];
+    var isCorrect = choiceText === correctValue;
+    var grid = document.getElementById('qz-qcmgrid-' + lessonKey);
+    var allBtns = grid ? grid.querySelectorAll('.qz-qcm-btn') : [];
+    allBtns.forEach(function (b) {
+      b.classList.add('qz-disabled');
+      if (b.textContent === correctValue) b.classList.add('qz-correct');
+    });
+
+    qzMarkWordResult(word.ar, isCorrect);
+
+    var fb = document.getElementById('qz-feedback-' + lessonKey);
+    if (isCorrect) {
+      if (fb) { fb.textContent = 'Exact !'; fb.className = 'qz-feedback qz-fb-correct'; }
+      s.validatedCount++;
+    } else {
+      clickedBtn.classList.remove('qz-disabled');
+      clickedBtn.classList.add('qz-wrong');
+      if (fb) { fb.textContent = 'La bonne réponse était : « ' + correctValue + ' »'; fb.className = 'qz-feedback qz-fb-wrong'; }
+      var insertPos = Math.min(s.queue.length, QZ_RETENTION_DELAY_MIN + Math.floor(Math.random() * 3));
+      s.queue.splice(insertPos, 0, { ar: word.ar, fr: word.fr, lessonKey: word.lessonKey, isReview: word.isReview });
+      s.totalCount++;
+    }
+
+    var card = document.getElementById('qz-card-' + lessonKey);
+    if (card) card.classList.add('qz-flipped');
+    qzUpdateProgress(lessonKey);
+
+    setTimeout(function () { qzNextCard(lessonKey); }, isCorrect ? 950 : 1500);
+  }
+
+  function qzEndSession(lessonKey) {
+    var lesson = QZ_LESSONS_DATA[lessonKey];
+    qzShowQuizUI(lessonKey, false);
+    var stats = document.getElementById('qz-endstats-' + lessonKey);
+    if (stats) stats.innerHTML = lesson.words.length + ' mots validés cette session.';
+    var endBlock = document.getElementById('qz-endblock-' + lessonKey);
+    if (endBlock) endBlock.style.display = 'block';
+  }
+
+  function qzInitLesson(lessonKey) {
+    qzSessions[lessonKey] = {
+      queue: qzBuildQueue(lessonKey),
+      totalCount: 0,
+      validatedCount: 0,
+      current: null,
+      answering: false
+    };
+    qzSessions[lessonKey].totalCount = qzSessions[lessonKey].queue.length;
+    qzShowQuizUI(lessonKey, true);
+    qzNextCard(lessonKey);
+  }
+
+  window.qzRestart = function (lessonKey) {
+    qzInitLesson(lessonKey);
+  };
+
+  window.qzResetAll = function () {
+    var ok = window.confirm('Repartir à zéro effacera toute la progression du Quizlet (localStorage). Continuer ?');
+    if (!ok) return;
+    qzState = { wordStats: {} };
+    qzSaveState();
+    QZ_LESSON_ORDER.forEach(function (k) { qzInitLesson(k); });
+  };
+
+  document.addEventListener('click', function (e) {
+    var card = e.target && e.target.closest ? e.target.closest('.qz-card') : null;
+    if (card) card.classList.toggle('qz-flipped');
+  });
+
+  function qzInitAll() {
+    QZ_LESSON_ORDER.forEach(function (k) { qzInitLesson(k); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', qzInitAll);
+  } else {
+    qzInitAll();
+  }
+
+})();
 </script>
 </body>
 </html>
